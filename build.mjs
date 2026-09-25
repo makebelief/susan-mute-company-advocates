@@ -5,6 +5,8 @@ const ROOT = process.cwd();
 const OUT = join(ROOT, 'dist');
 const BASE = 'https://susan-mute-company-advocates.vercel.app';
 const EMAIL = 'susanmutelaw@gmail.com';
+const PHONE = ''; // Add only after the client confirms a public phone/WhatsApp number.
+const WHATSAPP = ''; // Add only after the client confirms a WhatsApp number.
 
 const navigation = [
   ['/', 'Home'],
@@ -119,14 +121,18 @@ function footer() {
 }
 
 function quickContactRail() {
-  return `<aside class="quick-contact" data-quick-contact aria-label="Quick contact">
+  const whatsappHref = WHATSAPP ? `https://wa.me/${WHATSAPP.replace(/\D/g, '')}` : '/contact#contact-details';
+  const phoneHref = PHONE ? `tel:${PHONE}` : '/contact#contact-details';
+  return `<aside class="quick-contact quick-contact--channels" data-quick-contact aria-label="Quick contact">
     <button class="quick-contact__toggle" type="button" data-quick-contact-toggle aria-expanded="true" aria-label="Tuck quick contact inward">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
     </button>
-    <a class="quick-contact__action" href="mailto:${EMAIL}?subject=Legal%20enquiry" aria-label="Email Susan Mute and Company Advocates">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z"/><path d="M4 6l8 6 8-6"/></svg>
+    <a class="quick-contact__action quick-contact__whatsapp" href="${whatsappHref}" aria-label="WhatsApp Susan Mute and Company Advocates"${WHATSAPP ? ' target="_blank" rel="noopener noreferrer"' : ''}>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.9 7l-4.1 1.1 1.1-4A8 8 0 1 1 20 11.6Z"/><path d="M8.4 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.9 2c.1.3.1.5-.1.7l-.7.8c-.2.2-.2.4-.1.6.6 1.2 1.5 2.2 2.8 2.8.2.1.4.1.6-.1l.8-.9c.2-.2.5-.3.7-.1l1.9.9c.3.1.4.3.4.5 0 .4-.2 1.3-.8 1.8-.5.5-1.3.8-2.1.8-1.2 0-2.9-.6-4.8-2.3-1.5-1.4-2.6-3.2-3-4.6-.4-1.2-.1-2.2.3-2.9Z"/></svg>
     </a>
-    <a class="quick-contact__action quick-contact__linkedin" href="https://www.linkedin.com/in/susan-mute-70681516a" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on LinkedIn">in</a>
+    <a class="quick-contact__action quick-contact__phone" href="${phoneHref}" aria-label="Call Susan Mute and Company Advocates">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.3 3.5 4.8 5.1c-.8.5-1.1 1.5-.8 2.4 1.9 5.8 6.5 10.4 12.3 12.3.9.3 1.9 0 2.4-.8l1.6-2.5c.4-.7.3-1.6-.3-2.1l-2.8-2.2c-.6-.5-1.5-.4-2 .2l-1.3 1.6a13 13 0 0 1-4-4l1.6-1.3c.6-.5.7-1.4.2-2L9.4 3.8c-.5-.6-1.4-.7-2.1-.3Z"/></svg>
+    </a>
   </aside>`;
 }
 
@@ -173,35 +179,43 @@ const home = page({
   path: '/',
   title: 'Susan Mute & Company Advocates | Clear Counsel for a Changing World',
   description: 'Modern legal counsel for people, business and the digital age across employment, corporate, family, privacy, ICT, property and disputes.',
-  body: `<section class="susan-hero">
-    <div class="shell susan-hero__grid">
-      <div class="susan-hero__copy reveal">
+  body: `<section class="susan-hero-full">
+    <div class="susan-hero-full__media" aria-hidden="true"><img src="/assets/media/hero-consultation.webp" width="1672" height="941" alt="" fetchpriority="high"></div>
+    <div class="susan-hero-full__overlay" aria-hidden="true"></div>
+    <div class="shell susan-hero-full__content">
+      <div class="susan-hero-full__copy reveal">
         <p class="eyebrow">Susan Mute &amp; Company Advocates</p>
         <h1>Clear counsel for <span>people, business &amp; the digital age.</span></h1>
-        <p class="susan-hero__lede">A contemporary Kenyan legal practice offering practical advice across personal, commercial and digital-regulatory matters.</p>
-        <div class="susan-hero__actions"><a class="button button--navy" href="/contact">Discuss your matter</a><a class="susan-hero__link" href="/practice-areas">Explore our practice <span aria-hidden="true">↗</span></a></div>
-        <div class="susan-hero__trust">
-          <div><span>Managing Partner</span><strong>Susan Mute</strong></div>
-          <div><span>Professional standing</span><strong>Advocate of the High Court of Kenya</strong></div>
-          <div><span>Published voice</span><strong>Privacy · Data · AI</strong></div>
-        </div>
+        <p class="susan-hero-full__lede">Practical legal guidance for personal, commercial and digital-regulatory matters.</p>
+        <div class="susan-hero-full__actions"><a class="button button--cyan" href="/contact">Discuss your matter</a><a class="susan-hero-full__link" href="/practice-areas">Explore our practice <span aria-hidden="true">↗</span></a></div>
       </div>
-      <figure class="susan-hero__visual reveal">
-        <img src="/assets/media/hero-consultation.webp" width="1672" height="941" alt="Professionals in a modern consultation setting" fetchpriority="high">
-        <figcaption><span>Modern legal practice</span><strong>Clear advice. Practical next steps.</strong></figcaption>
-      </figure>
+      <div class="susan-hero-full__trust" aria-label="Practice highlights">
+        <div><span>Managing Partner</span><strong>Susan Mute</strong></div>
+        <div><span>Professional standing</span><strong>Advocate of the High Court of Kenya</strong></div>
+        <div><span>Published voice</span><strong>Privacy · Data · AI</strong></div>
+      </div>
     </div>
-    <div class="shell susan-hero__rail"><span>Employment &amp; Labour</span><span>Corporate &amp; Commercial</span><span>Family &amp; Succession</span><span>Data, Privacy &amp; ICT</span></div>
   </section>
 
   <section class="section susan-about"><div class="shell susan-about__grid">
-    <figure class="susan-about__media reveal"><img src="/assets/media/professional-meeting.webp" width="1200" height="1554" alt="Modern professional meeting space" loading="lazy"><figcaption>Practical advice shaped around the decision in front of you.</figcaption></figure>
-    <div class="susan-about__copy reveal"><p class="eyebrow">01 · The practice</p><h2>Legal guidance that is <span>clear, current and useful.</span></h2><p class="lede">Susan Mute &amp; Company Advocates brings together personal, commercial and digital-regulatory legal work in one contemporary practice.</p><p>From family and workplace questions to contracts, property, privacy and technology, the focus is on careful analysis, direct communication and practical next steps.</p><div class="susan-about__tags"><span>People</span><span>Business</span><span>Property</span><span>Digital &amp; compliance</span><span>Disputes</span></div></div>
+    <figure class="susan-about__media reveal"><img src="/assets/media/professional-meeting.webp" width="1200" height="1554" alt="Professionals in a modern meeting setting" loading="lazy"><figcaption>Practical advice shaped around the decision in front of you.</figcaption></figure>
+    <div class="susan-about__copy reveal"><p class="eyebrow">01 · The practice</p><h2>Legal guidance that is <span>clear, current and useful.</span></h2><p class="lede">Personal, commercial and digital-regulatory advice in one contemporary practice.</p><div class="susan-about__tags"><span>People</span><span>Business</span><span>Property</span><span>Digital &amp; compliance</span><span>Disputes</span></div><a class="text-link" href="/about">About the practice</a></div>
   </div></section>
 
-  <section class="section susan-services"><div class="shell"><div class="susan-section-heading"><div><p class="eyebrow">02 · Practice areas</p><h2>Focused counsel across <span>connected legal needs.</span></h2></div><p>Practical legal support for people, businesses and organisations — with a strong understanding of how modern regulation and technology affect everyday decisions.</p></div>
-    <div class="susan-services__grid">
-      ${practices.map((p, i) => `<a class="susan-service-card ${i === 3 ? 'susan-service-card--accent' : ''} ${i === practices.length - 1 ? 'susan-service-card--wide' : ''}" href="/practice-areas/${p.slug}"><div class="susan-service-card__top"><span>${String(i + 1).padStart(2, '0')}</span><b aria-hidden="true">↗</b></div><h3>${p.title}</h3><p>${p.summary}</p><span class="susan-service-card__group">${p.group}</span></a>`).join('')}
+  <section class="section susan-services"><div class="shell"><div class="susan-section-heading"><div><p class="eyebrow">02 · Practice areas</p><h2>Focused counsel across <span>connected legal needs.</span></h2></div><p>Choose the area closest to your matter.</p></div>
+    <div class="susan-services__grid susan-services__grid--visual">
+      ${practices.map((p, i) => {
+        const visual = ({
+          'employment-labour':'professional-meeting.webp',
+          'corporate-commercial':'hero-consultation.webp',
+          'family-succession':'professional-meeting.webp',
+          'data-protection-privacy-ict':'data-infrastructure.webp',
+          'intellectual-property':'data-infrastructure.webp',
+          'conveyancing-real-estate':'nairobi-architecture.webp',
+          'litigation-dispute-resolution':'hero-consultation.webp'
+        })[p.slug];
+        return `<a class="susan-service-card susan-service-card--visual ${i === practices.length - 1 ? 'susan-service-card--wide' : ''}" href="/practice-areas/${p.slug}"><img src="/assets/media/${visual}" alt="" loading="lazy"><span class="susan-service-card__shade" aria-hidden="true"></span><div class="susan-service-card__visual-copy"><div class="susan-service-card__top"><span>${String(i + 1).padStart(2, '0')}</span><b aria-hidden="true">↗</b></div><span class="susan-service-card__group">${p.group}</span><h3>${p.title}</h3></div></a>`;
+      }).join('')}
     </div>
   </div></section>
 
@@ -285,9 +299,9 @@ const contact = page({
   path: '/contact', title: 'Contact | Susan Mute & Company Advocates',
   description: 'Contact Susan Mute & Company Advocates by verified email to share a concise outline of your legal matter.',
   body: `${pageHero('Let’s begin with the matter at hand.', 'Share a concise outline by email. The firm can then confirm the appropriate next step.')}
-  <section class="section section--paper"><div class="shell feature-grid"><div class="feature-image"><img src="/assets/media/nairobi-architecture.webp" width="1200" height="2132" alt="Nairobi building and clock tower seen from the street"></div><div class="feature-copy"><p class="eyebrow">Contact</p><h2>Email the firm.</h2><p class="lede">Include your name, the general nature of the matter and any important deadline. Please do not attach confidential documents until the firm confirms it can act.</p><div class="contact-detail" style="border-color:var(--line)"><span style="color:var(--cyan)">Email</span><a style="color:var(--navy)" href="mailto:${EMAIL}?subject=Legal%20enquiry">${EMAIL}</a></div><div class="button-row"><a class="button button--navy" href="mailto:${EMAIL}?subject=Legal%20enquiry">Compose an email</a></div><p class="source-note">An email does not create an advocate-client relationship. The firm must first review the matter and confirm engagement.</p></div></div></section>
+  <section class="section section--paper" id="contact-details"><div class="shell feature-grid"><div class="feature-image"><img src="/assets/media/nairobi-architecture.webp" width="1200" height="2132" alt="Nairobi building and clock tower seen from the street"></div><div class="feature-copy"><p class="eyebrow">Contact</p><h2>Email the firm.</h2><p class="lede">Include your name, the general nature of the matter and any important deadline. Please do not attach confidential documents until the firm confirms it can act.</p><div class="contact-detail" style="border-color:var(--line)"><span style="color:var(--cyan)">Email</span><a style="color:var(--navy)" href="mailto:${EMAIL}?subject=Legal%20enquiry">${EMAIL}</a></div><div class="button-row"><a class="button button--navy" href="mailto:${EMAIL}?subject=Legal%20enquiry">Compose an email</a></div><p class="source-note">An email does not create an advocate-client relationship. The firm must first review the matter and confirm engagement.</p></div></div></section>
 
-  <section class="section office-map-section"><div class="shell"><div class="section-heading-premium"><div><p class="eyebrow">Location</p><h2>Find the practice in <span>Kiambu.</span></h2></div><p>Public service listings place Susan Mute &amp; Company Advocates in Kiambu, Kenya. Use the map to explore the area and directions.</p></div><div class="office-map"><iframe title="Google map for Susan Mute and Company Advocates in Kiambu, Kenya" src="https://www.google.com/maps?q=Susan+Mute+and+Company+Advocates,+Kiambu,+Kenya&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="office-map__bar"><div><span>Location</span><strong>Kiambu, Kenya</strong></div><a href="https://www.google.com/maps/search/?api=1&query=Susan+Mute+and+Company+Advocates+Kiambu+Kenya" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div></div></div></section>
+  <section class="office-map-section office-map-section--full"><div class="shell office-map-section__heading"><div class="section-heading-premium"><div><p class="eyebrow">Location</p><h2>Find the practice in <span>Kiambu.</span></h2></div><p>Public service listings place Susan Mute &amp; Company Advocates in Kiambu, Kenya. The exact street address should be confirmed before final launch.</p></div></div><div class="office-map office-map--full"><iframe title="Google map for Susan Mute and Company Advocates in Kiambu, Kenya" src="https://www.google.com/maps?q=Kiambu,+Kenya&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="office-map__bar"><div class="shell office-map__bar-inner"><div><span>Location</span><strong>Kiambu, Kenya</strong></div><a href="https://www.google.com/maps/search/?api=1&query=Susan+Mute+and+Company+Advocates+Kiambu+Kenya" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div></div></div></section>
   <section class="section section--ink"><div class="shell"><div class="intro-grid"><div><p class="eyebrow">Before you write</p><h2>Useful context for an initial enquiry.</h2></div><ul class="service-list"><li>Your full name and preferred email address</li><li>A short, factual summary of the issue</li><li>Any hearing, response or transaction deadline</li><li>The other parties involved, for conflict checking</li><li>The kind of assistance you are seeking</li><li>No confidential attachments until requested</li></ul></div></div></section>`
 });
 
