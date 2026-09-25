@@ -9,6 +9,10 @@ const forbidden = [
   /lorem ipsum/i,
   /prospect presentation/i,
   /supabase/i,
+  /nairobi-skyline/i,
+  /#24152e/i,
+  /#5e315f/i,
+  /#b56a73/i,
 ];
 
 async function walk(dir) {

@@ -1,38 +1,41 @@
-# Internal build notes
+# Internal redesign notes
 
-## Verified facts used publicly
+## Confirmed public facts retained
 
-- Susan Mute is an Advocate of the High Court of Kenya and Managing Partner at Susan Mute & Company Advocates. Confirmed by LinkedIn, Citizen Digital and Business Daily.
-- Verified public contact: `susanmutelaw@gmail.com`.
+- Susan Mute is an Advocate of the High Court of Kenya and Managing Partner at Susan Mute & Company Advocates.
+- Verified public email: `susanmutelaw@gmail.com`.
 - Verified public TikTok identity: Wakili Susan, `@wakilisusan`.
 - Supported practice areas: Employment & Labour; Corporate & Commercial; Family & Succession; Data Protection, Privacy & ICT; Intellectual Property; Conveyancing & Real Estate; Litigation & Dispute Resolution.
-- Verified publications: Citizen Digital on data compliance (19 June 2025) and AI regulation (12 August 2026); Business Daily on cyber phishing and privacy (25 June 2025).
-- Media Council of Kenya listed Susan Mute among the Social Media and Internet subgroup members of its AI, Data and Social Media technical working group in October 2023.
+- Verified published commentary: Citizen Digital on data compliance (19 June 2025) and AI regulation (12 August 2026); Business Daily on cyber phishing and privacy (25 June 2025).
+- The Media Council of Kenya listed Susan Mute among the Social Media and Internet subgroup members of its AI, Data and Social Media technical working group in October 2023.
 
-## Deliberately omitted pending client confirmation
+## Deliberately omitted pending confirmation
 
 - Phone and WhatsApp number
-- Exact office address and map
-- Opening hours
+- Exact office address, map and opening hours
 - Team members beyond Susan Mute
 - Education and qualifications beyond Advocate of the High Court of Kenya
 - Awards, client names, outcomes, testimonials and years-in-practice claims
-- Any claim that the proposed palette or typographic identity is official
+- Official domain ownership
 
-## Fresh website/domain check — 25 September 2026
+## Design translation sheet — redesign v2
 
-Searches for the exact firm name, common name variants, the published email address and likely domain phrases did not surface a standalone firm website. LinkedIn still exposes a generic “Company Website” field without the destination. Direct DNS probes of likely variants including `susanmuteadvocates.co.ke`, `susanmutelaw.co.ke`, `susanmutelaw.com`, `susanmuteandcompanyadvocates.co.ke`, `susanmute.co.ke` and `wakilisusan.co.ke` returned no address records. The public site therefore makes no claim about whether another website exists.
-
-## Design translation sheet
-
-- Personality: clear, intelligent, contemporary, calm, rights-aware and commercially useful.
+- Identity source: supplied `Susan Mute & Co Advocates` wordmark and supplied portraits.
+- Brand personality: modern, confident, polished, intelligent, calm and technology-aware.
 - Audience: individuals and families; founders, employers and organisations; teams navigating privacy, data and emerging-technology compliance.
 - Primary conversion: email the firm to discuss a matter.
-- Palette: deep aubergine, plum, clay, warm ivory, graphite and white.
-- Typography: editorial serif display with precise sans-serif UI/body copy.
-- Hero: split editorial composition with publication-style issue labels and a restrained Nairobi image panel; not portrait-led.
-- Practice presentation: three pathways followed by a numbered practice index.
-- Section sequence: proposition → pathways → practice index → leadership → thought leadership → working principles → contact.
-- Signature device: fine rules, oversized issue numbers and offset clay-coloured corner marks.
-- Photography: real, locally served images with documentary/architectural tone; Susan’s supplied portrait only for leadership/profile.
-- Differentiation from the Arende source: split editorial hero, aubergine/ivory colour architecture, grouped pathway/index services, serif-led typography, issue-number navigation and publication-forward sequencing.
+- Palette: wordmark-derived deep navy `#0C203B`, cyan `#10A0E0`, white, soft ice and charcoal. The previous plum/aubergine system is retired.
+- Typography: contemporary, tightly set sans-serif display language with restrained serif accents only where useful.
+- Hero: immersive navy composition led by Susan’s full-length portrait, real wordmark, concise proposition and one dominant action.
+- Practice presentation: asymmetric, image-aware mosaic followed by direct route links; no seven-card repetition.
+- Leadership: alternate high-resolution headshot in a spacious authority feature.
+- Section sequence: Susan-led hero → authority strip → practice mosaic → leadership → data/privacy feature → published insights → working principles → contact.
+- Signature device: fine cyan rules, corner frames and directional arrows derived from the wordmark’s linear geometry.
+- Photography: supplied portraits for identity; real Unsplash-licensed workplace, infrastructure and property photography retained only where semantically relevant.
+- Differentiation axes: portrait-led hero, sans-led typography, asymmetric services mosaic, navy/cyan colour architecture, branded navigation, layered section rhythm and compact copy.
+
+## Existing project safety
+
+- GitHub repository: `makebelief/susan-mute-company-advocates`.
+- Vercel project: `susan-mute-company-advocates` (`prj_FsHoOT480pQylJA2JawX1PTxSBBk`).
+- The redesign updates these existing targets only. The Arende reference project and any Supabase resources remain untouched.

@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">Susan Mute &amp; Company Advocates</title>
-  <rect width="64" height="64" rx="5" fill="#24152e"/>
-  <path d="M14 15h36v4H19v11h25v4H19v11h31v4H14z" fill="#faf7f2" opacity=".2"/>
-  <text x="32" y="42" text-anchor="middle" fill="#faf7f2" font-family="Georgia,serif" font-size="29">SM</text>
-  <rect x="48" y="13" width="4" height="4" fill="#b56a73"/>
+  <title id="title">Susan Mute &amp; Co Advocates</title>
+  <rect width="64" height="64" rx="5" fill="#0c203b"/>
+  <path d="M12 14h40v4H12zm0 32h40v4H12z" fill="#10a0e0"/>
+  <text x="32" y="40" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="24" font-weight="700">SM</text>
 </svg>
