@@ -198,7 +198,7 @@ const home = page({
   </section>
 
   <section class="section susan-about"><div class="shell susan-about__grid">
-    <figure class="susan-about__media reveal"><img src="/assets/media/professional-meeting.webp" width="1200" height="1554" alt="Professionals in a modern meeting setting" loading="lazy"><figcaption>Practical advice shaped around the decision in front of you.</figcaption></figure>
+    <figure class="susan-about__media reveal"><img src="/assets/media/insight-architecture.webp" width="1200" height="800" alt="Contemporary architectural detail in blue and white" loading="lazy"><figcaption>A contemporary practice built around clear, practical decisions.</figcaption></figure>
     <div class="susan-about__copy reveal"><p class="eyebrow">01 · The practice</p><h2>Legal guidance that is <span>clear, current and useful.</span></h2><p class="lede">Personal, commercial and digital-regulatory advice in one contemporary practice.</p><div class="susan-about__tags"><span>People</span><span>Business</span><span>Property</span><span>Digital &amp; compliance</span><span>Disputes</span></div><a class="text-link" href="/about">About the practice</a></div>
   </div></section>
 
@@ -207,12 +207,12 @@ const home = page({
       ${practices.map((p, i) => {
         const visual = ({
           'employment-labour':'professional-meeting.webp',
-          'corporate-commercial':'hero-consultation.webp',
-          'family-succession':'professional-meeting.webp',
-          'data-protection-privacy-ict':'data-infrastructure.webp',
-          'intellectual-property':'data-infrastructure.webp',
+          'corporate-commercial':'team-practice.webp',
+          'family-succession':'desk-detail.webp',
+          'data-protection-privacy-ict':'insight-layers.webp',
+          'intellectual-property':'insight-meeting.webp',
           'conveyancing-real-estate':'nairobi-architecture.webp',
-          'litigation-dispute-resolution':'hero-consultation.webp'
+          'litigation-dispute-resolution':'consultation-room.webp'
         })[p.slug];
         return `<a class="susan-service-card susan-service-card--visual ${i === practices.length - 1 ? 'susan-service-card--wide' : ''}" href="/practice-areas/${p.slug}"><img src="/assets/media/${visual}" alt="" loading="lazy"><span class="susan-service-card__shade" aria-hidden="true"></span><div class="susan-service-card__visual-copy"><div class="susan-service-card__top"><span>${String(i + 1).padStart(2, '0')}</span><b aria-hidden="true">↗</b></div><span class="susan-service-card__group">${p.group}</span><h3>${p.title}</h3></div></a>`;
       }).join('')}

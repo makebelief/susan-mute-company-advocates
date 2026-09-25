@@ -1,12 +1,22 @@
-# Image manifest — redesign v2
+# Image manifest — Susan Mute v7
 
-| Page / section | Purpose | Original source | Licence / status | Local filename | Alt text | Crop notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| Home hero | Primary identity and leadership visual | Client-supplied redesign package | Client-supplied; production-cleared | `assets/media/susan-mute-full-length.webp` | Susan Mute, Managing Partner | Full vertical composition; object-position tuned per breakpoint; no identity alteration |
-| Leadership / Susan profile / social sharing | High-resolution professional portrait | Client-supplied redesign package | Client-supplied; production-cleared | `assets/media/susan-mute-headshot.webp` | Susan Mute, Managing Partner | Square source; responsive portrait crop; no identity alteration |
-| Navigation / footer | Genuine firm wordmark | Client-supplied redesign package | Client-supplied; production-cleared | `assets/brand/susan-mute-wordmark.jpeg` | Susan Mute & Co Advocates | Original 4:1 artwork; displayed without recolouring |
-| Employment / workplace context | Real professional discussion | https://unsplash.com/photos/a-black-and-white-photo-of-a-meeting-room-vjj-fsa3k-Y | Unsplash License; production-cleared | `assets/media/professional-meeting.webp` | Professionals in discussion around a meeting table | Tall source used as contained workplace crop; does not represent firm staff |
-| Digital / data feature | Real infrastructure context | https://unsplash.com/photos/server-racks-in-data-center-klWUhr-wPJ8 | Unsplash License; production-cleared | `assets/media/data-infrastructure.webp` | Rows of server cabinets in a data centre | Wide crop with restrained navy overlay |
-| Property / conveyancing | Nairobi built-environment context | https://unsplash.com/photos/a-large-building-with-a-clock-tower-qJ9viJMaJEQ | Unsplash License; production-cleared | `assets/media/nairobi-architecture.webp` | Nairobi building and clock tower seen from the street | Vertical architectural crop |
+The homepage now avoids image recycling: the hero, practice tiles, leadership feature and digital feature each use a different image.
 
-All production images are served locally. No synthetic photography, AI-generated people, fake team imagery or random hotlinks are used.
+| Page / section | Purpose | Source / status | Local filename | Notes |
+| --- | --- | --- | --- | --- |
+| Home hero | Full-bleed consultation image | Existing Wakili Watech real-photography asset | `assets/media/hero-consultation.webp` | Landscape hero; not presented as Susan or her staff |
+| Home practice intro | Abstract architectural visual | Existing Wakili Watech real-photography asset | `assets/media/insight-architecture.webp` | Used as a visual device, not a factual office image |
+| Employment & Labour tile | Workplace discussion | Unsplash-sourced real photography from prior build | `assets/media/professional-meeting.webp` | Generic service illustration; not firm staff |
+| Corporate & Commercial tile | Business professionals | Existing Wakili Watech real-photography asset | `assets/media/team-practice.webp` | Generic commercial-service illustration; not firm staff |
+| Family & Succession tile | Documents / planning detail | Existing Wakili Watech real-photography asset | `assets/media/desk-detail.webp` | Generic planning/documentation context |
+| Data, Privacy & ICT tile | Abstract layered blue architecture | Existing Wakili Watech real-photography asset | `assets/media/insight-layers.webp` | Abstract digital/compliance visual |
+| Intellectual Property tile | Notebook / ideas detail | Existing Wakili Watech real-photography asset | `assets/media/insight-meeting.webp` | Idea/documentation visual |
+| Conveyancing & Real Estate tile | Nairobi architecture | Unsplash-sourced real photography from prior build | `assets/media/nairobi-architecture.webp` | Property/built-environment context |
+| Litigation & Disputes tile | Contemporary professional interior | Existing Wakili Watech real-photography asset | `assets/media/consultation-room.webp` | Generic professional setting |
+| Managing Partner | Susan Mute portrait | Client/user-supplied | `assets/media/susan-mute-full-length.webp` | Genuine Susan portrait |
+| Susan profile / social sharing | Susan Mute headshot | Client/user-supplied | `assets/media/susan-mute-headshot.webp` | Genuine Susan portrait |
+| Digital feature | Data-centre infrastructure | Unsplash-sourced real photography from prior build | `assets/media/data-infrastructure.webp` | Technology/data context |
+| Navigation / footer | Firm wordmark | Client/user-supplied | `assets/brand/susan-mute-wordmark-transparent-light.png`, `...-dark.png` | Transparent treatments derived from supplied wordmark |
+
+## Rights note
+No AI-generated photography or fake lawyer portraits are used. For a final client launch, any inherited Wakili Watech template photography whose original source metadata is not retained should be replaced with a freshly licensed/source-traceable equivalent or independently re-verified.
