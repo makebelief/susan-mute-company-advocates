@@ -92,7 +92,7 @@ function currentFor(path, href) {
 function header(path) {
   return `<header class="site-header">
     <div class="shell nav-wrap">
-      <a class="brand" href="/" aria-label="Susan Mute and Company Advocates — Home"><img src="/assets/brand/susan-mute-wordmark.jpeg" width="720" height="180" alt="Susan Mute &amp; Co Advocates"></a>
+      <a class="brand" href="/" aria-label="Susan Mute and Company Advocates — Home"><img src="/assets/brand/susan-mute-wordmark-transparent-light.png" width="720" height="162" alt="Susan Mute &amp; Co Advocates"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation" data-menu-toggle><span></span><span></span><span></span></button>
       <nav aria-label="Primary navigation">
         <ul class="nav-list" id="site-menu" data-menu>
@@ -108,7 +108,7 @@ function footer() {
   return `<footer class="site-footer">
     <div class="shell footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="/" aria-label="Susan Mute and Company Advocates — Home"><img src="/assets/brand/susan-mute-wordmark.jpeg" width="720" height="180" alt="Susan Mute &amp; Co Advocates"></a>
+        <a class="brand" href="/" aria-label="Susan Mute and Company Advocates — Home"><img src="/assets/brand/susan-mute-wordmark-transparent-dark.png" width="720" height="162" alt="Susan Mute &amp; Co Advocates"></a>
         <p>Clear counsel for people, business and the digital age.</p>
       </div>
       <div class="footer-col"><strong>Explore</strong><a href="/about">About</a><a href="/practice-areas">Practice areas</a><a href="/susan-mute">Managing Partner</a><a href="/insights">Insights</a><a href="/contact">Contact</a></div>
@@ -116,6 +116,18 @@ function footer() {
     </div>
     <div class="shell footer-bottom"><span>© <span data-year>2026</span> Susan Mute &amp; Company Advocates.</span><span>Website information is general and is not legal advice.</span></div>
   </footer>`;
+}
+
+function quickContactRail() {
+  return `<aside class="quick-contact" data-quick-contact aria-label="Quick contact">
+    <button class="quick-contact__toggle" type="button" data-quick-contact-toggle aria-expanded="true" aria-label="Tuck quick contact inward">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <a class="quick-contact__action" href="mailto:${EMAIL}?subject=Legal%20enquiry" aria-label="Email Susan Mute and Company Advocates">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5.5h17v13h-17z"/><path d="M4 6l8 6 8-6"/></svg>
+    </a>
+    <a class="quick-contact__action quick-contact__linkedin" href="https://www.linkedin.com/in/susan-mute-70681516a" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on LinkedIn">in</a>
+  </aside>`;
 }
 
 function schema() {
@@ -139,7 +151,7 @@ function page({ path, title, description, body, image = '/assets/icons/social-ca
   <meta name="theme-color" content="#0c203b"><meta property="og:type" content="website"><meta property="og:site_name" content="Susan Mute & Company Advocates"><meta property="og:title" content="${title}"><meta property="og:description" content="${description}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${BASE}${image}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${title}"><meta name="twitter:description" content="${description}"><meta name="twitter:image" content="${BASE}${image}">
   <link rel="stylesheet" href="/assets/css/site.css"><script type="application/ld+json">${schema()}</script><script src="/assets/js/site.js" defer></script>
-</head><body><a class="skip-link" href="#main">Skip to main content</a>${header(path)}<main id="main">${body}</main>${footer()}</body></html>`;
+</head><body><a class="skip-link" href="#main">Skip to main content</a>${header(path)}<main id="main">${body}</main>${quickContactRail()}${footer()}</body></html>`;
 }
 
 function pageHero(title, intro, parent = null) {
@@ -161,23 +173,23 @@ const home = page({
   path: '/',
   title: 'Susan Mute & Company Advocates | Clear Counsel for a Changing World',
   description: 'Modern legal counsel for people, business and the digital age across employment, corporate, family, privacy, ICT, property and disputes.',
-  body: `<section class="hero-editorial">
+  body: `<section class="hero-editorial hero-editorial--light">
     <div class="shell hero-editorial__grid">
       <div class="hero-editorial__copy reveal">
-        <p class="eyebrow eyebrow--light">Susan Mute &amp; Company Advocates</p>
+        <p class="eyebrow">Susan Mute &amp; Company Advocates</p>
         <h1>Clear counsel for <span>people, business &amp; the digital age.</span></h1>
-        <p class="hero-editorial__lede">A contemporary Kenyan legal practice led by Susan Mute, combining practical client service with a distinctive perspective on business, privacy and emerging technology.</p>
-        <div class="hero-editorial__actions"><a class="button button--cyan" href="/contact">Discuss your matter <span aria-hidden="true">↗</span></a><a class="hero-editorial__link" href="/practice-areas">Explore our practice <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-editorial__lede">A contemporary Kenyan legal practice combining practical client service with a distinctive perspective on business, privacy and emerging technology.</p>
+        <div class="hero-editorial__actions"><a class="button button--navy" href="/contact">Discuss your matter <span aria-hidden="true">↗</span></a><a class="hero-editorial__link" href="/practice-areas">Explore our practice <span aria-hidden="true">↗</span></a></div>
         <div class="hero-editorial__facts">
           <div><span>Leadership</span><strong>Susan Mute</strong><small>Managing Partner</small></div>
           <div><span>Professional standing</span><strong>Advocate</strong><small>High Court of Kenya</small></div>
           <div><span>Public voice</span><strong>Law · Privacy · AI</strong><small>Published commentary</small></div>
         </div>
       </div>
-      <div class="hero-editorial__visual reveal">
-        <div class="hero-editorial__portrait"><img src="/assets/media/susan-mute-full-length.webp" width="505" height="757" alt="Susan Mute, Managing Partner" fetchpriority="high"></div>
-        <div class="hero-editorial__label"><span>Managing Partner</span><strong>Susan Mute</strong><small>Advocate of the High Court of Kenya</small></div>
-      </div>
+      <figure class="hero-editorial__visual reveal">
+        <img class="hero-editorial__image" src="/assets/media/hero-consultation.webp" width="1672" height="941" alt="Professionals in a modern consultation setting" fetchpriority="high">
+        <figcaption class="hero-editorial__label"><span>Modern legal practice</span><strong>Clear advice. Practical next steps.</strong><small>People · Business · Digital &amp; compliance</small></figcaption>
+      </figure>
     </div>
     <div class="shell hero-editorial__bottom"><span>Employment &amp; Labour</span><span>Corporate &amp; Commercial</span><span>Family &amp; Succession</span><span>Data, Privacy &amp; ICT</span></div>
   </section>
@@ -274,6 +286,8 @@ const contact = page({
   description: 'Contact Susan Mute & Company Advocates by verified email to share a concise outline of your legal matter.',
   body: `${pageHero('Let’s begin with the matter at hand.', 'Share a concise outline by email. The firm can then confirm the appropriate next step.')}
   <section class="section section--paper"><div class="shell feature-grid"><div class="feature-image"><img src="/assets/media/nairobi-architecture.webp" width="1200" height="2132" alt="Nairobi building and clock tower seen from the street"></div><div class="feature-copy"><p class="eyebrow">Contact</p><h2>Email the firm.</h2><p class="lede">Include your name, the general nature of the matter and any important deadline. Please do not attach confidential documents until the firm confirms it can act.</p><div class="contact-detail" style="border-color:var(--line)"><span style="color:var(--cyan)">Email</span><a style="color:var(--navy)" href="mailto:${EMAIL}?subject=Legal%20enquiry">${EMAIL}</a></div><div class="button-row"><a class="button button--navy" href="mailto:${EMAIL}?subject=Legal%20enquiry">Compose an email</a></div><p class="source-note">An email does not create an advocate-client relationship. The firm must first review the matter and confirm engagement.</p></div></div></section>
+
+  <section class="section office-map-section"><div class="shell"><div class="section-heading-premium"><div><p class="eyebrow">Location</p><h2>Find the practice in <span>Kiambu.</span></h2></div><p>Public service listings place Susan Mute &amp; Company Advocates in Kiambu, Kenya. Use the map to explore the area and directions.</p></div><div class="office-map"><iframe title="Google map for Susan Mute and Company Advocates in Kiambu, Kenya" src="https://www.google.com/maps?q=Susan+Mute+and+Company+Advocates,+Kiambu,+Kenya&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="office-map__bar"><div><span>Location</span><strong>Kiambu, Kenya</strong></div><a href="https://www.google.com/maps/search/?api=1&query=Susan+Mute+and+Company+Advocates+Kiambu+Kenya" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a></div></div></div></section>
   <section class="section section--ink"><div class="shell"><div class="intro-grid"><div><p class="eyebrow">Before you write</p><h2>Useful context for an initial enquiry.</h2></div><ul class="service-list"><li>Your full name and preferred email address</li><li>A short, factual summary of the issue</li><li>Any hearing, response or transaction deadline</li><li>The other parties involved, for conflict checking</li><li>The kind of assistance you are seeking</li><li>No confidential attachments until requested</li></ul></div></div></section>`
 });
 

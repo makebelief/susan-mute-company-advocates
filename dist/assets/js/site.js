@@ -41,3 +41,12 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
   }, { threshold: 0.12 });
   revealNodes.forEach((node) => observer.observe(node));
 }
+
+
+const quickContact = document.querySelector('[data-quick-contact]');
+const quickContactToggle = document.querySelector('[data-quick-contact-toggle]');
+quickContactToggle?.addEventListener('click', () => {
+  const tucked = quickContact?.classList.toggle('is-tucked') ?? false;
+  quickContactToggle.setAttribute('aria-expanded', String(!tucked));
+  quickContactToggle.setAttribute('aria-label', tucked ? 'Open quick contact' : 'Tuck quick contact inward');
+});
