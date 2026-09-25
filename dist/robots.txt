@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://susan-mute-company-advocates.vercel.app/sitemap.xml

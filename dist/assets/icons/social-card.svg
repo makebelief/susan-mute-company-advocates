@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#24152e"/>
+  <path d="M0 510h1200v120H0z" fill="#5e315f"/>
+  <path d="M880 0h320v320L880 0z" fill="#b56a73" opacity=".9"/>
+  <path d="M72 72h185" stroke="#b56a73" stroke-width="4"/>
+  <text x="72" y="205" fill="#faf7f2" font-family="Georgia,serif" font-size="76">Susan Mute</text>
+  <text x="72" y="284" fill="#faf7f2" font-family="Georgia,serif" font-size="58">&amp; Company Advocates</text>
+  <text x="74" y="375" fill="#decfd4" font-family="Arial,sans-serif" font-size="27" letter-spacing="2">CLEAR LEGAL GUIDANCE FOR A CHANGING WORLD.</text>
+  <text x="74" y="573" fill="#faf7f2" font-family="Arial,sans-serif" font-size="21" letter-spacing="4">PEOPLE  ·  BUSINESS  ·  DIGITAL &amp; COMPLIANCE</text>
+</svg>

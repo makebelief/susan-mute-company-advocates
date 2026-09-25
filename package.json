@@ -1,0 +1,13 @@
+{
+  "name": "susan-mute-company-advocates",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node scripts/check-site.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
