@@ -159,29 +159,52 @@ function insightCards() {
 
 const home = page({
   path: '/',
-  title: 'Susan Mute & Company Advocates | Practical Law. Modern Perspective.',
-  description: 'Clear legal counsel for people, business and the digital age across employment, corporate, family, privacy, ICT, property and disputes.',
-  body: `<section class="hero"><div class="hero__stage"><div class="hero__media"><img src="/assets/media/susan-mute-headshot.webp" width="800" height="800" alt="Susan Mute, Managing Partner" fetchpriority="high"></div><div class="hero__copy">
-      <p class="eyebrow">People · Business · Digital</p>
-      <h1>Clear counsel. <em>Modern perspective.</em></h1>
-      <p class="lede">Practical legal guidance for a changing world.</p>
-      <div class="button-row"><a class="button button--light" href="/contact">Discuss your matter</a><a class="text-link" href="/practice-areas">Explore our services</a></div>
-    </div><ul class="hero__meta"><li>Managing Partner · Susan Mute</li><li>Advocate of the High Court of Kenya</li><li>Privacy, data &amp; AI</li></ul></div></section>
-    <section class="section section--paper"><div class="shell"><div class="intro-grid"><div><p class="eyebrow">How we help</p><h2>Legal support that meets the moment.</h2></div><p class="lede muted">From personal transitions and workplace questions to commercial decisions and digital compliance, the practice focuses on what matters next.</p></div>
-      <div class="practice-mosaic">
-        <a class="practice-tile practice-tile--photo" href="/practice-areas/employment-labour"><img class="practice-tile__image" src="/assets/media/professional-meeting.webp" width="1200" height="1554" alt="Professionals in discussion around a meeting table" loading="lazy"><span class="practice-tile__arrow">↗</span><div class="practice-tile__content"><span class="practice-tile__num">01 · PEOPLE &amp; WORK</span><h3>Employment &amp; Labour</h3></div></a>
-        <a class="practice-tile" href="/practice-areas/corporate-commercial"><span class="practice-tile__arrow">↗</span><div class="practice-tile__content"><span class="practice-tile__num">02 · BUSINESS</span><h3>Corporate &amp; Commercial</h3></div></a>
-        <a class="practice-tile" href="/practice-areas/family-succession"><span class="practice-tile__arrow">↗</span><div class="practice-tile__content"><span class="practice-tile__num">03 · PEOPLE</span><h3>Family &amp; Succession</h3></div></a>
-        <a class="practice-tile practice-tile--photo" href="/practice-areas/data-protection-privacy-ict"><img class="practice-tile__image" src="/assets/media/data-infrastructure.webp" width="1500" height="894" alt="Rows of server cabinets in a data centre" loading="lazy"><span class="practice-tile__arrow">↗</span><div class="practice-tile__content"><span class="practice-tile__num">04 · DIGITAL</span><h3>Data, Privacy &amp; ICT</h3></div></a>
-        <a class="practice-tile practice-tile--photo" href="/practice-areas/conveyancing-real-estate"><img class="practice-tile__image" src="/assets/media/nairobi-architecture.webp" width="1200" height="2132" alt="Nairobi building and clock tower seen from the street" loading="lazy"><span class="practice-tile__arrow">↗</span><div class="practice-tile__content"><span class="practice-tile__num">05 · PROPERTY</span><h3>Conveyancing &amp; Real Estate</h3></div></a>
-        <a class="practice-tile" href="/practice-areas/intellectual-property"><span class="practice-tile__arrow">↗</span><div class="practice-tile__content"><span class="practice-tile__num">06 · ASSETS</span><h3>Intellectual Property</h3></div></a>
-        <a class="practice-tile" href="/practice-areas/litigation-dispute-resolution"><span class="practice-tile__arrow">↗</span><div class="practice-tile__content"><span class="practice-tile__num">07 · RESOLUTION</span><h3>Litigation &amp; Disputes</h3></div></a>
-      </div><div class="button-row"><a class="text-link" href="/practice-areas">View every practice area</a></div>
-    </div></section>
-    <section class="section section--ink"><div class="shell profile-grid"><div class="profile-portrait profile-portrait--full"><img src="/assets/media/susan-mute-full-length.webp" width="505" height="757" alt="Susan Mute, Managing Partner" loading="lazy"></div><div class="profile-copy"><p class="eyebrow">Managing Partner</p><h2>Meet Susan Mute.</h2><p class="lede muted">An Advocate of the High Court of Kenya bringing legal clarity to people, business and technology.</p><div class="profile-facts"><div><span>Role</span>Managing Partner</div><div><span>Public legal education</span>Wakili Susan</div></div><a class="text-link" href="/susan-mute">View profile</a></div></div></section>
-    <section class="section section--blue"><div class="shell feature-grid"><div class="feature-image"><img src="/assets/media/data-infrastructure.webp" width="1500" height="894" alt="Rows of server cabinets in a data centre" loading="lazy"></div><div class="feature-copy"><p class="eyebrow">A signature digital practice</p><h2>Data obligations, made practical.</h2><p class="lede muted">Policies matter. So do the systems, contracts and daily decisions behind them. The practice helps organisations turn privacy and technology duties into clear priorities.</p><div class="topic-list"><span>Data protection</span><span>Privacy</span><span>ICT law</span><span>AI governance</span></div><div class="button-row"><a class="button" href="/practice-areas/data-protection-privacy-ict">Explore digital law</a></div></div></div></section>
-    <section class="section section--paper home-insights"><div class="shell"><div class="intro-grid"><div><p class="eyebrow">Published thinking</p><h2>Ideas for a changing legal landscape.</h2></div><a class="text-link" href="/insights">View all insights</a></div><div class="insights-grid">${insightCards()}</div></div></section>
-    ${contactBand()}`
+  title: 'Susan Mute & Company Advocates | Clear Counsel for a Changing World',
+  description: 'Modern legal counsel for people, business and the digital age across employment, corporate, family, privacy, ICT, property and disputes.',
+  body: `<section class="hero-editorial">
+    <div class="shell hero-editorial__grid">
+      <div class="hero-editorial__copy reveal">
+        <p class="eyebrow eyebrow--light">Susan Mute &amp; Company Advocates</p>
+        <h1>Clear counsel for <span>people, business &amp; the digital age.</span></h1>
+        <p class="hero-editorial__lede">A contemporary Kenyan legal practice led by Susan Mute, combining practical client service with a distinctive perspective on business, privacy and emerging technology.</p>
+        <div class="hero-editorial__actions"><a class="button button--cyan" href="/contact">Discuss your matter <span aria-hidden="true">↗</span></a><a class="hero-editorial__link" href="/practice-areas">Explore our practice <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-editorial__facts">
+          <div><span>Leadership</span><strong>Susan Mute</strong><small>Managing Partner</small></div>
+          <div><span>Professional standing</span><strong>Advocate</strong><small>High Court of Kenya</small></div>
+          <div><span>Public voice</span><strong>Law · Privacy · AI</strong><small>Published commentary</small></div>
+        </div>
+      </div>
+      <div class="hero-editorial__visual reveal">
+        <div class="hero-editorial__portrait"><img src="/assets/media/susan-mute-full-length.webp" width="505" height="757" alt="Susan Mute, Managing Partner" fetchpriority="high"></div>
+        <div class="hero-editorial__label"><span>Managing Partner</span><strong>Susan Mute</strong><small>Advocate of the High Court of Kenya</small></div>
+      </div>
+    </div>
+    <div class="shell hero-editorial__bottom"><span>Employment &amp; Labour</span><span>Corporate &amp; Commercial</span><span>Family &amp; Succession</span><span>Data, Privacy &amp; ICT</span></div>
+  </section>
+
+  <section class="section home-intro"><div class="shell home-intro__grid">
+    <figure class="home-intro__media reveal"><img src="/assets/media/professional-meeting.webp" width="1200" height="1554" alt="Professionals in discussion around a meeting table" loading="lazy"><figcaption>Practical advice shaped around the person, organisation and decision in front of us.</figcaption></figure>
+    <div class="home-intro__copy reveal"><p class="eyebrow">01 · The practice</p><h2>Legal guidance that is <span>clear, current and useful.</span></h2><p class="lede">Susan Mute &amp; Company Advocates brings together personal, commercial and digital-regulatory legal work in one contemporary practice.</p><p>From family and workplace questions to contracts, property, privacy and technology, the focus is on careful analysis, direct communication and practical next steps.</p><div class="home-intro__tags"><span>People</span><span>Business</span><span>Property</span><span>Digital &amp; compliance</span><span>Disputes</span></div></div>
+  </div></section>
+
+  <section class="section home-services"><div class="shell"><div class="section-heading-premium"><div><p class="eyebrow">02 · Practice areas</p><h2>Focused counsel across <span>connected legal needs.</span></h2></div><p>Advice for people, businesses and organisations — with a strong understanding of how modern technology and regulation affect everyday legal decisions.</p></div>
+    <div class="home-service-grid">
+      ${practices.map((p, i) => `<a class="home-service-card ${i === 3 ? 'home-service-card--accent' : ''} ${i === practices.length - 1 ? 'home-service-card--wide' : ''}" href="/practice-areas/${p.slug}"><div class="home-service-card__top"><span>${String(i + 1).padStart(2, '0')}</span><b aria-hidden="true">↗</b></div><h3>${p.title}</h3><p>${p.summary}</p><span class="home-service-card__group">${p.group}</span></a>`).join('')}
+    </div>
+  </div></section>
+
+  <section class="section partner-feature"><div class="shell partner-feature__grid">
+    <div class="partner-feature__portrait reveal"><img src="/assets/media/susan-mute-headshot.webp" width="800" height="800" alt="Susan Mute, Managing Partner" loading="lazy"></div>
+    <div class="partner-feature__copy reveal"><p class="eyebrow eyebrow--light">03 · Managing Partner</p><h2>Legal practice with a <span>public-education instinct.</span></h2><p class="partner-feature__name">Susan Mute</p><p class="lede">An Advocate of the High Court of Kenya whose public work connects practical legal service with clear thinking on data protection, privacy, cybersecurity and AI regulation.</p><div class="partner-feature__facts"><div><span>Published commentary</span><strong>Citizen Digital · Business Daily</strong></div><div><span>Public legal education</span><strong>Wakili Susan</strong></div></div><a class="partner-feature__link" href="/susan-mute">Meet Susan <span aria-hidden="true">↗</span></a></div>
+  </div></section>
+
+  <section class="section digital-feature"><div class="shell digital-feature__grid">
+    <div class="digital-feature__copy reveal"><p class="eyebrow eyebrow--light">04 · Digital &amp; compliance</p><h2>Technology moves quickly. <span>Legal obligations still have to work in practice.</span></h2><p class="lede">The firm helps organisations translate privacy, data and ICT obligations into practical priorities for contracts, systems, teams and everyday decisions.</p><div class="topic-list"><span>Data protection</span><span>Privacy</span><span>ICT law</span><span>AI governance</span></div><a class="button button--light" href="/practice-areas/data-protection-privacy-ict">Explore digital law</a></div>
+    <figure class="digital-feature__media reveal"><img src="/assets/media/data-infrastructure.webp" width="1500" height="894" alt="Rows of server cabinets in a data centre" loading="lazy"><figcaption>Digital law, privacy and compliance.</figcaption></figure>
+  </div></section>
+
+  <section class="section section--paper home-insights"><div class="shell"><div class="section-heading-premium"><div><p class="eyebrow">05 · Published thinking</p><h2>Ideas for a changing <span>legal landscape.</span></h2></div><a class="text-link" href="/insights">View all insights</a></div><div class="insights-grid">${insightCards()}</div></div></section>
+  ${contactBand()}`
 });
 
 const about = page({
