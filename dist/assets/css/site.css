@@ -484,3 +484,147 @@ body{background:var(--white);}
 @media(max-width:1080px){.home-service-card--wide{grid-column:span 2;}}
 @media(max-width:680px){.home-service-card--wide{grid-column:span 1;}}
 \n\n/* ========================================================================== */\n/* SUSAN MUTE LIGHT HERO + TRANSPARENT BRAND + MAP + QUICK CONTACT — v3       */\n/* ========================================================================== */\n\n/* Light global header using the transparent wordmark. */\n.site-header{background:rgba(255,255,255,.97);border-top:3px solid var(--cyan);border-bottom:1px solid var(--line);color:var(--navy);}\n.site-header .brand{background:transparent;overflow:visible;width:clamp(13rem,18vw,16rem);}\n.site-header .brand img{display:block;width:100%;height:auto;}\n.site-header .nav-list a{color:var(--navy);}\n.site-header .nav-list .nav-cta{color:#fff;background:var(--navy);border-color:var(--navy);}\n.site-header .nav-list .nav-cta:hover{color:var(--navy);background:transparent;border-color:var(--navy);}\n.site-header .menu-toggle{color:var(--navy);border-color:rgba(12,32,59,.3);}\n.footer-brand .brand{background:transparent;overflow:visible;}\n.footer-brand .brand img{width:100%;height:auto;}\n\n/* Light hero: the hero image is real professional photography, not a portrait of Susan. */\n.hero-editorial--light{background:#f7fafc;color:var(--ink);border-bottom:1px solid var(--line);}\n.hero-editorial--light::before{width:680px;height:680px;left:-390px;top:-410px;border-color:rgba(22,167,223,.19);}\n.hero-editorial--light .hero-editorial__grid{grid-template-columns:minmax(0,.92fr) minmax(460px,1.08fr);gap:58px;min-height:690px;align-items:center;}\n.hero-editorial--light .hero-editorial__copy{padding:78px 0 58px;}\n.hero-editorial--light .eyebrow{color:var(--navy);}\n.hero-editorial--light .hero-editorial__copy h1{max-width:790px;color:var(--navy);font-size:clamp(3.65rem,6.2vw,6.65rem);}\n.hero-editorial--light .hero-editorial__copy h1 span{color:var(--cyan-dark);}\n.hero-editorial--light .hero-editorial__lede{max-width:620px;color:#526579;}\n.hero-editorial--light .hero-editorial__link{color:var(--navy);border-color:rgba(12,32,59,.3);}\n.hero-editorial--light .hero-editorial__link:hover{color:var(--cyan-dark);}\n.hero-editorial--light .hero-editorial__facts{border-top-color:var(--line);}\n.hero-editorial--light .hero-editorial__facts>div{border-right-color:var(--line);}\n.hero-editorial--light .hero-editorial__facts span{color:var(--cyan-dark);}\n.hero-editorial--light .hero-editorial__facts strong{color:var(--navy);}\n.hero-editorial--light .hero-editorial__facts small{color:var(--muted);}\n.hero-editorial--light .hero-editorial__visual{position:relative;min-height:520px;margin:54px 0;background:#dfeaf0;border:0;box-shadow:0 24px 58px rgba(12,32,59,.12);overflow:hidden;}\n.hero-editorial--light .hero-editorial__visual::before{content:"";position:absolute;z-index:2;top:20px;right:20px;width:64px;height:64px;border-top:6px solid var(--cyan);border-right:6px solid var(--cyan);}\n.hero-editorial__image{width:100%;height:100%;min-height:520px;object-fit:cover;object-position:center;}\n.hero-editorial--light .hero-editorial__label{right:24px;bottom:24px;left:24px;max-width:390px;padding:18px 22px;background:rgba(255,255,255,.95);color:var(--ink);border-left:5px solid var(--cyan);box-shadow:0 16px 40px rgba(12,32,59,.15);}\n.hero-editorial--light .hero-editorial__label span{color:var(--cyan-dark);}\n.hero-editorial--light .hero-editorial__label strong{color:var(--navy);}\n.hero-editorial--light .hero-editorial__label small{color:var(--muted);}\n.hero-editorial--light .hero-editorial__bottom{border-top:1px solid var(--line);background:#fff;}\n.hero-editorial--light .hero-editorial__bottom span{color:#56697a;border-right-color:var(--line);}\n\n/* Quick-contact rail: tucks inward only slightly so all action icons stay visible. */\n.quick-contact{position:fixed;z-index:160;top:44%;right:0;display:flex;flex-direction:column;width:60px;overflow:hidden;color:#fff;background:var(--navy);border-radius:16px 0 0 16px;box-shadow:0 16px 34px rgba(12,32,59,.22);transition:transform .22s ease;}\n.quick-contact.is-tucked{transform:translateX(10px);}\n.quick-contact__toggle,.quick-contact__action{display:grid;width:60px;height:58px;place-items:center;color:#fff;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.18);text-decoration:none;cursor:pointer;}\n.quick-contact__toggle{background:var(--navy-2);}\n.quick-contact__action:last-child{border-bottom:0;}\n.quick-contact__toggle:hover,.quick-contact__action:hover{background:var(--cyan-dark);}\n.quick-contact svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}\n.quick-contact__toggle svg{transition:transform .22s ease;}\n.quick-contact.is-tucked .quick-contact__toggle svg{transform:rotate(180deg);}\n.quick-contact__linkedin{font-family:Arial,sans-serif;font-size:1.08rem;font-weight:800;letter-spacing:-.04em;}\n\n/* Google map. */\n.office-map-section{background:#fff;}\n.office-map{overflow:hidden;border:1px solid var(--line);background:#eef3f6;box-shadow:0 20px 50px rgba(12,32,59,.08);}\n.office-map iframe{display:block;width:100%;height:500px;border:0;background:#e8eef2;}\n.office-map__bar{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:22px 26px;background:#fff;border-top:1px solid var(--line);}\n.office-map__bar span{display:block;color:var(--cyan-dark);font-size:.62rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;}\n.office-map__bar strong{display:block;margin-top:3px;color:var(--navy);font-family:var(--serif);font-size:1.25rem;font-weight:600;}\n.office-map__bar a{color:var(--navy);font-size:.68rem;font-weight:800;letter-spacing:.1em;text-decoration:none;text-transform:uppercase;border-bottom:1px solid var(--cyan);}\n\n@media(max-width:900px){\n  .site-header .nav-list{background:#fff;border-top:1px solid var(--line);}\n  .site-header .nav-list li{border-color:var(--line);}\n  .site-header .nav-list a{color:var(--navy);}\n  .hero-editorial--light .hero-editorial__grid{grid-template-columns:1fr;gap:0;min-height:auto;}\n  .hero-editorial--light .hero-editorial__copy{padding:64px 0 40px;}\n  .hero-editorial--light .hero-editorial__visual{min-height:480px;margin:0 0 54px;}\n  .hero-editorial__image{min-height:480px;}\n}\n@media(max-width:680px){\n  .site-header .brand{width:11.4rem;}\n  .hero-editorial--light .hero-editorial__copy h1{font-size:clamp(3rem,13.8vw,4.2rem);}\n  .hero-editorial--light .hero-editorial__facts{grid-template-columns:1fr;margin-top:34px;}\n  .hero-editorial--light .hero-editorial__facts>div,.hero-editorial--light .hero-editorial__facts>div+div{padding:14px 0;border-right:0;border-bottom:1px solid var(--line);}\n  .hero-editorial--light .hero-editorial__visual{min-height:360px;margin-bottom:40px;}\n  .hero-editorial__image{min-height:360px;}\n  .hero-editorial--light .hero-editorial__label{right:14px;bottom:14px;left:14px;max-width:none;padding:14px 16px;}\n  .quick-contact{top:43%;width:56px;}\n  .quick-contact.is-tucked{transform:translateX(8px);}\n  .quick-contact__toggle,.quick-contact__action{width:56px;height:54px;}\n  .office-map iframe{height:390px;}\n  .office-map__bar{align-items:flex-start;flex-direction:column;padding:18px;}\n}\n@media(max-width:390px){\n  .hero-editorial--light .hero-editorial__visual{min-height:320px;}\n  .hero-editorial__image{min-height:320px;}\n  .quick-contact{top:42%;}\n}\n
+/* ========================================================================== */
+/* SUSAN MUTE PREMIUM REBUILD — v5                                             */
+/* Inspired by Wakili Watech's Nero / Arende design discipline                */
+/* ========================================================================== */
+
+body{background:#fff;color:var(--ink);}
+.site-header{background:rgba(255,255,255,.97);border-top:3px solid var(--cyan);border-bottom:1px solid #d9e2e8;box-shadow:0 10px 34px rgba(7,27,53,.04);}
+.site-header .nav-wrap{min-height:88px;}
+.site-header .brand{width:clamp(13.5rem,18vw,16.8rem);background:transparent;overflow:visible;}
+.site-header .brand img{width:100%;height:auto;}
+.site-header .nav-list a{font-size:.72rem;letter-spacing:.08em;}
+.site-header .nav-list .nav-cta{padding:.8rem 1.25rem;}
+
+.susan-hero{position:relative;overflow:hidden;background:#f5f8fa;border-bottom:1px solid var(--line);}
+.susan-hero::before{content:"";position:absolute;left:-300px;top:-420px;width:720px;height:720px;border:1px solid rgba(17,169,226,.16);border-radius:50%;pointer-events:none;}
+.susan-hero__grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,.93fr) minmax(520px,1.07fr);gap:68px;min-height:700px;align-items:center;}
+.susan-hero__copy{padding:84px 0 60px;}
+.susan-hero__copy .eyebrow{margin-bottom:24px;}
+.susan-hero__copy h1{max-width:780px;font-family:var(--serif);font-size:clamp(3.8rem,6.4vw,6.8rem);font-weight:500;line-height:.98;letter-spacing:-.055em;color:var(--navy);}
+.susan-hero__copy h1 span{display:block;color:var(--cyan-dark);}
+.susan-hero__lede{max-width:600px;margin:28px 0 0;color:#526579;font-size:1.15rem;line-height:1.7;}
+.susan-hero__actions{display:flex;align-items:center;gap:24px;margin-top:32px;flex-wrap:wrap;}
+.susan-hero__link{display:inline-flex;align-items:center;gap:10px;color:var(--navy);font-size:.74rem;font-weight:800;letter-spacing:.1em;text-decoration:none;text-transform:uppercase;border-bottom:1px solid rgba(7,27,53,.28);padding-bottom:4px;}
+.susan-hero__link:hover{color:var(--cyan-dark);}
+.susan-hero__trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:54px;border-top:1px solid var(--line);}
+.susan-hero__trust>div{padding:18px 18px 0 0;border-right:1px solid var(--line);}
+.susan-hero__trust>div+div{padding-left:18px;}
+.susan-hero__trust>div:last-child{border-right:0;}
+.susan-hero__trust span{display:block;color:var(--cyan-dark);font-size:.6rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;}
+.susan-hero__trust strong{display:block;margin-top:5px;color:var(--navy);font-family:var(--serif);font-size:1.03rem;font-weight:600;line-height:1.25;}
+.susan-hero__visual{position:relative;margin:56px 0;min-height:535px;overflow:hidden;background:#dde7ed;box-shadow:0 24px 60px rgba(7,27,53,.13);}
+.susan-hero__visual::before{content:"";position:absolute;z-index:2;top:22px;right:22px;width:72px;height:72px;border-top:7px solid var(--cyan);border-right:7px solid var(--cyan);}
+.susan-hero__visual img{width:100%;height:100%;min-height:535px;object-fit:cover;object-position:center;}
+.susan-hero__visual figcaption{position:absolute;z-index:2;left:24px;bottom:24px;max-width:360px;padding:17px 21px;background:rgba(255,255,255,.96);border-left:5px solid var(--cyan);box-shadow:0 18px 44px rgba(7,27,53,.18);}
+.susan-hero__visual figcaption span{display:block;color:var(--cyan-dark);font-size:.61rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;}
+.susan-hero__visual figcaption strong{display:block;margin-top:4px;color:var(--navy);font-family:var(--serif);font-size:1.4rem;font-weight:600;line-height:1.12;}
+.susan-hero__rail{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);background:#fff;}
+.susan-hero__rail span{padding:18px 20px 19px 0;border-right:1px solid var(--line);color:#516478;font-size:.67rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;}
+.susan-hero__rail span+span{padding-left:20px;}
+.susan-hero__rail span:last-child{border-right:0;}
+
+.susan-about{background:#fff;}
+.susan-about__grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:90px;align-items:center;}
+.susan-about__media{position:relative;margin:0;min-height:560px;overflow:hidden;background:#eef2f5;}
+.susan-about__media img{width:100%;height:100%;min-height:560px;object-fit:cover;object-position:center;filter:saturate(.76);}
+.susan-about__media figcaption{position:absolute;left:0;bottom:0;max-width:340px;padding:17px 21px;background:#fff;border-top:4px solid var(--cyan);color:#41566a;font-size:.8rem;}
+.susan-about__copy h2{max-width:780px;font-size:clamp(2.9rem,5vw,5rem);}
+.susan-about__copy h2 span,.susan-section-heading h2 span{color:var(--cyan-dark);}
+.susan-about__copy .lede{margin-top:26px;color:#3d5164;font-size:1.18rem;}
+.susan-about__copy>p:not(.eyebrow):not(.lede){max-width:670px;color:var(--muted);}
+.susan-about__tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;padding-top:28px;border-top:1px solid var(--line);}
+.susan-about__tags span{padding:9px 13px;border:1px solid var(--line);color:var(--navy);font-size:.68rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;background:#fff;}
+
+.susan-services{background:#f1f5f8;}
+.susan-section-heading{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:70px;align-items:end;margin-bottom:54px;}
+.susan-section-heading h2{max-width:900px;}
+.susan-section-heading>p{margin:0;color:var(--muted);font-size:1.02rem;}
+.susan-services__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #d5dfe6;border-left:1px solid #d5dfe6;background:#fff;}
+.susan-service-card{position:relative;display:flex;min-height:360px;flex-direction:column;padding:30px;border-right:1px solid #d5dfe6;border-bottom:1px solid #d5dfe6;text-decoration:none;background:#fff;transition:transform .22s,background .22s,color .22s,box-shadow .22s;}
+.susan-service-card:hover{z-index:2;transform:translateY(-4px);box-shadow:0 18px 42px rgba(7,27,53,.1);}
+.susan-service-card--accent{background:var(--navy);color:#fff;}
+.susan-service-card--accent h3,.susan-service-card--accent p,.susan-service-card--accent .susan-service-card__group{color:#fff;}
+.susan-service-card--wide{grid-column:span 3;min-height:280px;}
+.susan-service-card__top{display:flex;align-items:center;justify-content:space-between;color:var(--cyan-dark);font-size:.69rem;font-weight:800;letter-spacing:.12em;}
+.susan-service-card__top b{font-size:1.35rem;font-weight:400;}
+.susan-service-card h3{max-width:14ch;margin-top:auto;font-size:clamp(1.7rem,2.4vw,2.45rem);line-height:1.04;}
+.susan-service-card p{max-width:42ch;margin:18px 0 0;color:var(--muted);font-size:.92rem;}
+.susan-service-card__group{margin-top:24px;color:var(--cyan-dark);font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;}
+
+.susan-partner{background:#fff;}
+.susan-partner__grid{display:grid;grid-template-columns:.86fr 1.14fr;min-height:670px;background:#f6f9fb;}
+.susan-partner__portrait{position:relative;min-height:670px;overflow:hidden;background:#e8e5ef;}
+.susan-partner__portrait::after{content:"";position:absolute;right:20px;bottom:20px;width:76px;height:76px;border-right:7px solid var(--cyan);border-bottom:7px solid var(--cyan);}
+.susan-partner__portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.susan-partner__copy{display:flex;flex-direction:column;justify-content:center;padding:74px clamp(38px,7vw,100px);}
+.susan-partner__copy h2{max-width:720px;}
+.susan-partner__copy h2 span{color:var(--cyan-dark);}
+.susan-partner__name{margin:30px 0 12px;color:var(--navy);font-family:var(--serif);font-size:1.55rem;}
+.susan-partner__copy .lede{color:#526579;}
+.susan-partner__facts{margin:32px 0;border-top:1px solid var(--line);}
+.susan-partner__facts>div{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line);}
+.susan-partner__facts span{color:var(--cyan-dark);font-size:.61rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;}
+.susan-partner__facts strong{color:var(--navy);font-weight:700;}
+
+.susan-digital{background:#0d3155;color:#fff;}
+.susan-digital__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center;}
+.susan-digital__copy h2{max-width:720px;color:#fff;}
+.susan-digital__copy h2 span{display:block;color:#50c9f3;}
+.susan-digital__copy .lede{color:#c3d1dc;}
+.susan-digital__media{position:relative;margin:0;min-height:530px;overflow:hidden;}
+.susan-digital__media img{width:100%;height:100%;min-height:530px;object-fit:cover;filter:saturate(.72);}
+.susan-digital__media figcaption{position:absolute;right:0;bottom:0;padding:14px 18px;background:#fff;color:var(--navy);font-size:.76rem;border-top:3px solid var(--cyan);}
+
+.susan-insights{background:#fff;}
+.susan-insights .insights-grid{margin-top:20px;}
+.susan-insights .insight-card{min-height:320px;}
+.susan-insights .insight-card h3{font-size:clamp(1.7rem,2.5vw,2.35rem);}
+
+/* Keep the quick rail compact and elegant. */
+.quick-contact{top:45%;border-radius:14px 0 0 14px;box-shadow:0 12px 30px rgba(7,27,53,.2);}
+.quick-contact.is-tucked{transform:translateX(6px);}
+
+@media(max-width:1050px){
+  .susan-hero__grid{grid-template-columns:1fr 1fr;gap:34px;}
+  .susan-hero__copy h1{font-size:clamp(3.6rem,7vw,5rem);}
+  .susan-services__grid{grid-template-columns:repeat(2,1fr);}
+  .susan-service-card--wide{grid-column:span 2;}
+}
+@media(max-width:850px){
+  .susan-hero__grid{grid-template-columns:1fr;gap:0;min-height:auto;}
+  .susan-hero__copy{padding:64px 0 42px;}
+  .susan-hero__visual{margin:0 0 46px;min-height:480px;}
+  .susan-hero__visual img{min-height:480px;}
+  .susan-about__grid,.susan-partner__grid,.susan-digital__grid,.susan-section-heading{grid-template-columns:1fr;}
+  .susan-about__grid{gap:48px;}
+  .susan-partner__portrait{min-height:580px;}
+  .susan-digital__grid{gap:44px;}
+  .susan-section-heading{gap:24px;}
+}
+@media(max-width:620px){
+  .site-header .nav-wrap{min-height:78px;}
+  .site-header .brand{width:11.5rem;}
+  .susan-hero__copy{padding:54px 0 34px;}
+  .susan-hero__copy h1{font-size:clamp(3rem,13.6vw,4.25rem);line-height:.98;}
+  .susan-hero__lede{font-size:1rem;}
+  .susan-hero__actions{flex-direction:column;align-items:stretch;}
+  .susan-hero__actions .button,.susan-hero__actions .susan-hero__link{width:100%;justify-content:center;}
+  .susan-hero__trust{grid-template-columns:1fr;margin-top:36px;}
+  .susan-hero__trust>div,.susan-hero__trust>div+div{padding:14px 0;border-right:0;border-bottom:1px solid var(--line);}
+  .susan-hero__visual{min-height:340px;margin-bottom:34px;}
+  .susan-hero__visual img{min-height:340px;}
+  .susan-hero__visual figcaption{left:14px;right:14px;bottom:14px;max-width:none;padding:14px 16px;}
+  .susan-hero__rail{grid-template-columns:1fr 1fr;}
+  .susan-hero__rail span,.susan-hero__rail span+span{padding:13px 8px 13px 0;font-size:.56rem;}
+  .susan-hero__rail span:nth-child(even){padding-left:10px;}
+  .susan-about__media,.susan-about__media img{min-height:430px;}
+  .susan-services__grid{grid-template-columns:1fr;}
+  .susan-service-card,.susan-service-card--wide{grid-column:auto;min-height:290px;}
+  .susan-partner__portrait{min-height:500px;}
+  .susan-partner__copy{padding:50px 26px;}
+  .susan-partner__facts>div{grid-template-columns:1fr;gap:4px;}
+  .susan-digital__media,.susan-digital__media img{min-height:380px;}
+  .quick-contact.is-tucked{transform:translateX(5px);}
+}

@@ -173,49 +173,49 @@ const home = page({
   path: '/',
   title: 'Susan Mute & Company Advocates | Clear Counsel for a Changing World',
   description: 'Modern legal counsel for people, business and the digital age across employment, corporate, family, privacy, ICT, property and disputes.',
-  body: `<section class="hero-editorial hero-editorial--light">
-    <div class="shell hero-editorial__grid">
-      <div class="hero-editorial__copy reveal">
+  body: `<section class="susan-hero">
+    <div class="shell susan-hero__grid">
+      <div class="susan-hero__copy reveal">
         <p class="eyebrow">Susan Mute &amp; Company Advocates</p>
         <h1>Clear counsel for <span>people, business &amp; the digital age.</span></h1>
-        <p class="hero-editorial__lede">A contemporary Kenyan legal practice combining practical client service with a distinctive perspective on business, privacy and emerging technology.</p>
-        <div class="hero-editorial__actions"><a class="button button--navy" href="/contact">Discuss your matter <span aria-hidden="true">↗</span></a><a class="hero-editorial__link" href="/practice-areas">Explore our practice <span aria-hidden="true">↗</span></a></div>
-        <div class="hero-editorial__facts">
-          <div><span>Leadership</span><strong>Susan Mute</strong><small>Managing Partner</small></div>
-          <div><span>Professional standing</span><strong>Advocate</strong><small>High Court of Kenya</small></div>
-          <div><span>Public voice</span><strong>Law · Privacy · AI</strong><small>Published commentary</small></div>
+        <p class="susan-hero__lede">A contemporary Kenyan legal practice offering practical advice across personal, commercial and digital-regulatory matters.</p>
+        <div class="susan-hero__actions"><a class="button button--navy" href="/contact">Discuss your matter</a><a class="susan-hero__link" href="/practice-areas">Explore our practice <span aria-hidden="true">↗</span></a></div>
+        <div class="susan-hero__trust">
+          <div><span>Managing Partner</span><strong>Susan Mute</strong></div>
+          <div><span>Professional standing</span><strong>Advocate of the High Court of Kenya</strong></div>
+          <div><span>Published voice</span><strong>Privacy · Data · AI</strong></div>
         </div>
       </div>
-      <figure class="hero-editorial__visual reveal">
-        <img class="hero-editorial__image" src="/assets/media/hero-consultation.webp" width="1672" height="941" alt="Professionals in a modern consultation setting" fetchpriority="high">
-        <figcaption class="hero-editorial__label"><span>Modern legal practice</span><strong>Clear advice. Practical next steps.</strong><small>People · Business · Digital &amp; compliance</small></figcaption>
+      <figure class="susan-hero__visual reveal">
+        <img src="/assets/media/hero-consultation.webp" width="1672" height="941" alt="Professionals in a modern consultation setting" fetchpriority="high">
+        <figcaption><span>Modern legal practice</span><strong>Clear advice. Practical next steps.</strong></figcaption>
       </figure>
     </div>
-    <div class="shell hero-editorial__bottom"><span>Employment &amp; Labour</span><span>Corporate &amp; Commercial</span><span>Family &amp; Succession</span><span>Data, Privacy &amp; ICT</span></div>
+    <div class="shell susan-hero__rail"><span>Employment &amp; Labour</span><span>Corporate &amp; Commercial</span><span>Family &amp; Succession</span><span>Data, Privacy &amp; ICT</span></div>
   </section>
 
-  <section class="section home-intro"><div class="shell home-intro__grid">
-    <figure class="home-intro__media reveal"><img src="/assets/media/professional-meeting.webp" width="1200" height="1554" alt="Professionals in discussion around a meeting table" loading="lazy"><figcaption>Practical advice shaped around the person, organisation and decision in front of us.</figcaption></figure>
-    <div class="home-intro__copy reveal"><p class="eyebrow">01 · The practice</p><h2>Legal guidance that is <span>clear, current and useful.</span></h2><p class="lede">Susan Mute &amp; Company Advocates brings together personal, commercial and digital-regulatory legal work in one contemporary practice.</p><p>From family and workplace questions to contracts, property, privacy and technology, the focus is on careful analysis, direct communication and practical next steps.</p><div class="home-intro__tags"><span>People</span><span>Business</span><span>Property</span><span>Digital &amp; compliance</span><span>Disputes</span></div></div>
+  <section class="section susan-about"><div class="shell susan-about__grid">
+    <figure class="susan-about__media reveal"><img src="/assets/media/professional-meeting.webp" width="1200" height="1554" alt="Modern professional meeting space" loading="lazy"><figcaption>Practical advice shaped around the decision in front of you.</figcaption></figure>
+    <div class="susan-about__copy reveal"><p class="eyebrow">01 · The practice</p><h2>Legal guidance that is <span>clear, current and useful.</span></h2><p class="lede">Susan Mute &amp; Company Advocates brings together personal, commercial and digital-regulatory legal work in one contemporary practice.</p><p>From family and workplace questions to contracts, property, privacy and technology, the focus is on careful analysis, direct communication and practical next steps.</p><div class="susan-about__tags"><span>People</span><span>Business</span><span>Property</span><span>Digital &amp; compliance</span><span>Disputes</span></div></div>
   </div></section>
 
-  <section class="section home-services"><div class="shell"><div class="section-heading-premium"><div><p class="eyebrow">02 · Practice areas</p><h2>Focused counsel across <span>connected legal needs.</span></h2></div><p>Advice for people, businesses and organisations — with a strong understanding of how modern technology and regulation affect everyday legal decisions.</p></div>
-    <div class="home-service-grid">
-      ${practices.map((p, i) => `<a class="home-service-card ${i === 3 ? 'home-service-card--accent' : ''} ${i === practices.length - 1 ? 'home-service-card--wide' : ''}" href="/practice-areas/${p.slug}"><div class="home-service-card__top"><span>${String(i + 1).padStart(2, '0')}</span><b aria-hidden="true">↗</b></div><h3>${p.title}</h3><p>${p.summary}</p><span class="home-service-card__group">${p.group}</span></a>`).join('')}
+  <section class="section susan-services"><div class="shell"><div class="susan-section-heading"><div><p class="eyebrow">02 · Practice areas</p><h2>Focused counsel across <span>connected legal needs.</span></h2></div><p>Practical legal support for people, businesses and organisations — with a strong understanding of how modern regulation and technology affect everyday decisions.</p></div>
+    <div class="susan-services__grid">
+      ${practices.map((p, i) => `<a class="susan-service-card ${i === 3 ? 'susan-service-card--accent' : ''} ${i === practices.length - 1 ? 'susan-service-card--wide' : ''}" href="/practice-areas/${p.slug}"><div class="susan-service-card__top"><span>${String(i + 1).padStart(2, '0')}</span><b aria-hidden="true">↗</b></div><h3>${p.title}</h3><p>${p.summary}</p><span class="susan-service-card__group">${p.group}</span></a>`).join('')}
     </div>
   </div></section>
 
-  <section class="section partner-feature"><div class="shell partner-feature__grid">
-    <div class="partner-feature__portrait reveal"><img src="/assets/media/susan-mute-headshot.webp" width="800" height="800" alt="Susan Mute, Managing Partner" loading="lazy"></div>
-    <div class="partner-feature__copy reveal"><p class="eyebrow eyebrow--light">03 · Managing Partner</p><h2>Legal practice with a <span>public-education instinct.</span></h2><p class="partner-feature__name">Susan Mute</p><p class="lede">An Advocate of the High Court of Kenya whose public work connects practical legal service with clear thinking on data protection, privacy, cybersecurity and AI regulation.</p><div class="partner-feature__facts"><div><span>Published commentary</span><strong>Citizen Digital · Business Daily</strong></div><div><span>Public legal education</span><strong>Wakili Susan</strong></div></div><a class="partner-feature__link" href="/susan-mute">Meet Susan <span aria-hidden="true">↗</span></a></div>
+  <section class="section susan-partner"><div class="shell susan-partner__grid">
+    <div class="susan-partner__portrait reveal"><img src="/assets/media/susan-mute-full-length.webp" width="505" height="757" alt="Susan Mute, Managing Partner" loading="lazy"></div>
+    <div class="susan-partner__copy reveal"><p class="eyebrow">03 · Managing Partner</p><h2>Legal practice with a <span>public-education instinct.</span></h2><p class="susan-partner__name">Susan Mute</p><p class="lede">An Advocate of the High Court of Kenya whose public work connects practical legal service with clear thinking on data protection, privacy, cybersecurity and AI regulation.</p><div class="susan-partner__facts"><div><span>Published commentary</span><strong>Citizen Digital · Business Daily</strong></div><div><span>Public legal education</span><strong>Wakili Susan</strong></div></div><a class="text-link" href="/susan-mute">Meet Susan</a></div>
   </div></section>
 
-  <section class="section digital-feature"><div class="shell digital-feature__grid">
-    <div class="digital-feature__copy reveal"><p class="eyebrow eyebrow--light">04 · Digital &amp; compliance</p><h2>Technology moves quickly. <span>Legal obligations still have to work in practice.</span></h2><p class="lede">The firm helps organisations translate privacy, data and ICT obligations into practical priorities for contracts, systems, teams and everyday decisions.</p><div class="topic-list"><span>Data protection</span><span>Privacy</span><span>ICT law</span><span>AI governance</span></div><a class="button button--light" href="/practice-areas/data-protection-privacy-ict">Explore digital law</a></div>
-    <figure class="digital-feature__media reveal"><img src="/assets/media/data-infrastructure.webp" width="1500" height="894" alt="Rows of server cabinets in a data centre" loading="lazy"><figcaption>Digital law, privacy and compliance.</figcaption></figure>
+  <section class="section susan-digital"><div class="shell susan-digital__grid">
+    <div class="susan-digital__copy reveal"><p class="eyebrow eyebrow--light">04 · Digital &amp; compliance</p><h2>Technology moves quickly. <span>Legal obligations still have to work in practice.</span></h2><p class="lede">The firm helps organisations translate privacy, data and ICT obligations into practical priorities for contracts, systems, teams and everyday decisions.</p><div class="topic-list"><span>Data protection</span><span>Privacy</span><span>ICT law</span><span>AI governance</span></div><a class="button button--light" href="/practice-areas/data-protection-privacy-ict">Explore digital law</a></div>
+    <figure class="susan-digital__media reveal"><img src="/assets/media/data-infrastructure.webp" width="1500" height="894" alt="Rows of server cabinets in a data centre" loading="lazy"><figcaption>Digital law, privacy and compliance.</figcaption></figure>
   </div></section>
 
-  <section class="section section--paper home-insights"><div class="shell"><div class="section-heading-premium"><div><p class="eyebrow">05 · Published thinking</p><h2>Ideas for a changing <span>legal landscape.</span></h2></div><a class="text-link" href="/insights">View all insights</a></div><div class="insights-grid">${insightCards()}</div></div></section>
+  <section class="section susan-insights"><div class="shell"><div class="susan-section-heading"><div><p class="eyebrow">05 · Published thinking</p><h2>Ideas for a changing <span>legal landscape.</span></h2></div><a class="text-link" href="/insights">View all insights</a></div><div class="insights-grid">${insightCards()}</div></div></section>
   ${contactBand()}`
 });
 
