@@ -3,5 +3,5 @@ dist/
 .DS_Store
 *.log
 
-# Cloudflare Wrangler local files
+# Cloudflare Wrangler local cache
 .wrangler/
