@@ -438,3 +438,58 @@ img{height:auto}
 }
 
 /* END CONTACT PAGE SOCIALS V7 */
+
+/* ORIGINAL SLIDING RAIL V8 */
+
+/* The entire rail slides slightly sideways when collapsed.
+   WhatsApp and Call ALWAYS remain visible and clickable. */
+.contact-rail{
+  transition:transform .28s ease;
+}
+
+.contact-rail.collapsed{
+  transform:translate(9px,-50%);
+}
+
+/* Override the temporary hide-icons behaviour */
+.contact-rail.collapsed .rail-actions{
+  max-height:140px !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+  visibility:visible !important;
+  display:flex !important;
+}
+
+/* Keep the two contact actions visible */
+.rail-actions{
+  max-height:140px !important;
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Chevron simply changes direction */
+.contact-rail.collapsed .rail-chevron{
+  transform:rotate(180deg);
+}
+
+/* Mobile retains the same sliding-drawer behaviour */
+@media(max-width:720px){
+  .contact-rail.collapsed{
+    transform:translate(7px,-50%);
+  }
+
+  .contact-rail.collapsed .rail-actions,
+  .rail-actions{
+    max-height:110px !important;
+    opacity:1 !important;
+    pointer-events:auto !important;
+  }
+}
+
+@media(max-width:390px){
+  .contact-rail.collapsed{
+    transform:translate(6px,-50%);
+  }
+}
+
+/* END ORIGINAL SLIDING RAIL V8 */
