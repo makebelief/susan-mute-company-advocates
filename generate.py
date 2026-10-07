@@ -182,7 +182,7 @@ def jsonld(data):
 def head(title, desc, path='/', schema=None, robots='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'):
     url=url_for(path)
     schema_markup=jsonld(schema) if schema else ''
-    return f'''<!doctype html><html lang="en-KE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>{escape(title)}</title><meta name="description" content="{escape(desc)}"><meta name="robots" content="{robots}"><meta name="author" content="Susan Mute &amp; Company Advocates"><link rel="canonical" href="{url}"><link rel="alternate" hreflang="en-KE" href="{url}"><link rel="alternate" hreflang="x-default" href="{url}"><meta name="theme-color" content="#081b39"><meta name="color-scheme" content="light"><meta property="og:type" content="website"><meta property="og:locale" content="en_KE"><meta property="og:site_name" content="Susan Mute &amp; Company Advocates"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Susan Mute &amp; Company Advocates"><meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(desc)}"><meta name="twitter:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta name="twitter:image:alt" content="Susan Mute &amp; Company Advocates"><link rel="manifest" href="/site.webmanifest"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/site.css?v=6">{schema_markup}</head><body><a class="skip-link" href="#main">Skip to content</a><div class="topline"></div>'''
+    return f'''<!doctype html><html lang="en-KE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>{escape(title)}</title><meta name="description" content="{escape(desc)}"><meta name="robots" content="{robots}"><meta name="author" content="Susan Mute &amp; Company Advocates"><link rel="canonical" href="{url}"><link rel="alternate" hreflang="en-KE" href="{url}"><link rel="alternate" hreflang="x-default" href="{url}"><meta name="theme-color" content="#081b39"><meta name="color-scheme" content="light"><meta property="og:type" content="website"><meta property="og:locale" content="en_KE"><meta property="og:site_name" content="Susan Mute &amp; Company Advocates"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Susan Mute &amp; Company Advocates"><meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(desc)}"><meta name="twitter:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta name="twitter:image:alt" content="Susan Mute &amp; Company Advocates"><link rel="manifest" href="/site.webmanifest"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/site.css?v=7">{schema_markup}</head><body><a class="skip-link" href="#main">Skip to content</a><div class="topline"></div>'''
 
 
 def header(active=''):
@@ -193,100 +193,24 @@ def header(active=''):
 
 
 def rail():
-    return f'''<aside class="contact-rail" aria-label="Quick contact and social media">
-<button class="rail-toggle" aria-label="Expand or collapse quick contact and social media" aria-expanded="true">
+    return f'''<aside class="contact-rail" aria-label="Quick contact">
+<button class="rail-toggle" aria-label="Expand or collapse quick contact" aria-expanded="true">
 <svg viewBox="0 0 24 24" class="rail-chevron" aria-hidden="true">
 <path d="M9 18l6-6-6-6"/>
 </svg>
 </button>
-
-<div class="rail-actions" role="group" aria-label="Contact and social media links">
-
-<a class="rail-link rail-whatsapp"
-   data-platform="whatsapp"
-   href="{WA}"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="WhatsApp Susan Mute & Company Advocates"
-   title="WhatsApp">
+<div class="rail-actions">
+<a class="rail-link rail-whatsapp" href="{WA}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Susan Mute & Company Advocates" title="WhatsApp">
 <svg viewBox="0 0 24 24" class="brand-line" aria-hidden="true">
 <path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.3-4.2a8.5 8.5 0 1 1 15.7-4.5Z"/>
 <path d="M8.2 8.1c.5 2.6 2.5 4.9 5.1 5.9.9.4 1.8-.2 2.3-1.1"/>
 </svg>
 </a>
-
-<a class="rail-link rail-linkedin"
-   data-platform="linkedin"
-   href="{LINKEDIN}"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Susan Mute on LinkedIn"
-   title="LinkedIn">
-<svg viewBox="0 0 24 24" class="brand-fill" aria-hidden="true">
-<path d="M5.34 3.31a2.06 2.06 0 1 0 0 4.12 2.06 2.06 0 0 0 0-4.12ZM3.56 9h3.56v11.45H3.56V9Zm5.79 0h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9Z"/>
-</svg>
-</a>
-
-<a class="rail-link rail-instagram"
-   data-platform="instagram"
-   href="{INSTAGRAM}"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Susan Mute on Instagram"
-   title="Instagram">
-<svg viewBox="0 0 24 24" class="brand-line" aria-hidden="true">
-<rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/>
-<circle cx="12" cy="12" r="4.1"/>
-<circle cx="17.4" cy="6.7" r=".9" class="icon-dot"/>
-</svg>
-</a>
-
-<a class="rail-link rail-facebook"
-   data-platform="facebook"
-   href="{FACEBOOK}"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Susan Mute on Facebook"
-   title="Facebook">
-<svg viewBox="0 0 24 24" class="brand-fill" aria-hidden="true">
-<path d="M13.65 21v-8.2h2.75l.41-3.2h-3.16V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.29-.04-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.6H7.6v3.2h2.75V21h3.3Z"/>
-</svg>
-</a>
-
-<a class="rail-link rail-tiktok"
-   data-platform="tiktok"
-   href="{TIKTOK}"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Susan Mute on TikTok"
-   title="TikTok">
-<svg viewBox="0 0 24 24" class="brand-fill" aria-hidden="true">
-<path d="M14.1 3c.3 2.1 1.5 3.4 3.9 3.8v3.1a8.4 8.4 0 0 1-3.9-1.3v6.2a5.8 5.8 0 1 1-5-5.75v3.2a2.7 2.7 0 1 0 1.9 2.58V3h3.1Z"/>
-</svg>
-</a>
-
-<a class="rail-link rail-x"
-   data-platform="x"
-   href="{X_PROFILE}"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Susan Mute on X"
-   title="X">
-<svg viewBox="0 0 24 24" class="brand-fill" aria-hidden="true">
-<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
-</svg>
-</a>
-
-<a class="rail-link rail-call"
-   data-platform="phone"
-   href="tel:{PHONE_LINK}"
-   aria-label="Call Susan Mute & Company Advocates"
-   title="Call">
+<a class="rail-link rail-call" href="tel:{PHONE_LINK}" aria-label="Call Susan Mute & Company Advocates" title="Call">
 <svg viewBox="0 0 24 24" class="brand-line" aria-hidden="true">
 <path d="M5 4h3l1.4 4-2 1.4a16 16 0 0 0 7.2 7.2l1.4-2L20 16v3c0 1.1-.9 2-2 2C9.7 21 3 14.3 3 6c0-1.1.9-2 2-2Z"/>
 </svg>
 </a>
-
 </div>
 </aside>'''
 
@@ -296,7 +220,7 @@ def cta():
 
 
 def footer():
-    return f'''<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand"><img src="/images/logo-white.png" width="1236" height="1095" loading="lazy" decoding="async" alt="Susan Mute & Company Advocates"></div><p>{PRACTICES}</p></div><div><h4>Contact</h4><p><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a><br>Kikinga House, 6th Floor, Suite 600B<br>Biashara Street, Kiambu Town</p></div><div><h4>Quick links</h4><p><a href="/practice-areas">Practice Areas</a><br><a href="/managing-partner">Susan Mute</a><br><a href="{WA}" target="_blank" rel="noopener noreferrer">Start a consultation</a></p><h4>Social</h4><p><a href="{LINKEDIN}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on LinkedIn">LinkedIn</a> · <a href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on Instagram">Instagram</a><br><a href="{X_PROFILE}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on X">X</a> · <a href="{FACEBOOK}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on Facebook">Facebook</a> · <a href="{TIKTOK}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on TikTok">TikTok</a></p></div></div><div class="footer-bottom"><span>© 2026 Susan Mute & Company Advocates.</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/legal-notice">Legal Notice</a></span></div></div></footer><script src="/assets/js/site.js?v=5" defer></script></body></html>'''
+    return f'''<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand"><img src="/images/logo-white.png" width="1236" height="1095" loading="lazy" decoding="async" alt="Susan Mute & Company Advocates"></div><p>{PRACTICES}</p></div><div><h4>Contact</h4><p><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a><br>Kikinga House, 6th Floor, Suite 600B<br>Biashara Street, Kiambu Town</p></div><div><h4>Quick links</h4><p><a href="/practice-areas">Practice Areas</a><br><a href="/managing-partner">Susan Mute</a><br><a href="{WA}" target="_blank" rel="noopener noreferrer">Start a consultation</a></p></div></div><div class="footer-bottom"><span>© 2026 Susan Mute & Company Advocates.</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/legal-notice">Legal Notice</a></span></div></div></footer><script src="/assets/js/site.js?v=5" defer></script></body></html>'''
 
 
 def wrap(body,title,desc,path='/',active='',schema=None,robots='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'):
@@ -361,7 +285,46 @@ insights=f'''<section class="page-hero"><div class="container"><div class="eyebr
 (ROOT/'insights.html').write_text(wrap(insights,'Insights & Commentary | Susan Mute & Company Advocates','Read selected legal commentary and public contributions by Susan Mute on artificial intelligence, data protection, privacy and digital regulation.','/insights','insights',internal_schema('Insights & Commentary','/insights','CollectionPage')),encoding='utf-8')
 
 # Contact
-contact=f'''<section class="page-hero"><div class="container"><div class="eyebrow">Contact</div><h1 class="page-title">Get in touch.</h1><p>Call, WhatsApp or email Susan Mute & Company Advocates. Current office details are provided below.</p></div></section><section class="page-main">{breadcrumbs([('Home','/'),('Contact','/contact')])}<div class="container contact-grid"><div><div class="contact-list"><div class="contact-item"><small>Phone / WhatsApp</small><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a></div><div class="contact-item"><small>Email</small><a href="mailto:{EMAIL}">{EMAIL}</a></div><div class="contact-item"><small>Office</small><span>Kikinga House<br>6th Floor, Suite 600B<br>Biashara Street, Kiambu Town<br>Next to KCB Bank</span></div><div class="contact-item"><small>Consultation</small><a href="{WA}" target="_blank" rel="noopener noreferrer">Start on WhatsApp →</a></div></div></div><div><form class="contact-form" data-contact-form aria-describedby="contact-privacy-note"><label class="field"><span>Your name</span><input name="name" autocomplete="name" maxlength="120" required></label><label class="field"><span>Phone number</span><input name="phone" autocomplete="tel" inputmode="tel" maxlength="30"></label><label class="field full"><span>Email address</span><input type="email" name="email" autocomplete="email" maxlength="180"></label><label class="field full"><span>Matter type</span><select name="matter"><option value="General legal enquiry">General legal enquiry</option><option>Commercial Law</option><option>Family Law</option><option>Property Law</option><option>Data Privacy & Protection</option><option>Artificial Intelligence</option><option>Civil Law</option></select></label><label class="field full"><span>Briefly describe the matter</span><textarea name="message" maxlength="1800"></textarea></label><button class="btn btn-navy full" type="submit">Prepare email enquiry</button></form><p class="small-note" id="contact-privacy-note">Submitting this form opens your device’s email application. The website does not store the information you enter, and contacting the firm does not by itself create an advocate-client relationship.</p></div></div></section><section class="map-wrap"><div class="container map-head"><div class="eyebrow">Find the office</div><h2 class="section-title">Kikinga House, Biashara Street.</h2></div><div class="map-shell"><iframe title="Map to Susan Mute & Company Advocates" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Kikinga%20House%20Biashara%20Street%20Kiambu%20Town%20KCB%20Bank%20Kenya&output=embed"></iframe><div class="map-footer"><div><strong>Kikinga House, 6th Floor, Suite 600B</strong><span>Biashara Street, next to KCB Bank, Kiambu Town, Kenya</span></div><a class="btn btn-navy" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Kikinga+House+Biashara+Street+Kiambu+Town+KCB+Bank+Kenya">Open in Google Maps →</a></div></div></section>'''
+contact=f'''<section class="page-hero"><div class="container"><div class="eyebrow">Contact</div><h1 class="page-title">Get in touch.</h1><p>Call, WhatsApp or email Susan Mute & Company Advocates. Current office details are provided below.</p></div></section><section class="page-main">{breadcrumbs([('Home','/'),('Contact','/contact')])}<div class="container contact-grid"><div><div class="contact-list"><div class="contact-item"><small>Phone / WhatsApp</small><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a></div><div class="contact-item"><small>Email</small><a href="mailto:{EMAIL}">{EMAIL}</a></div><div class="contact-item"><small>Office</small><span>Kikinga House<br>6th Floor, Suite 600B<br>Biashara Street, Kiambu Town<br>Next to KCB Bank</span></div><div class="contact-item"><small>Consultation</small><a href="{WA}" target="_blank" rel="noopener noreferrer">Start on WhatsApp →</a></div></div>
+
+<div class="contact-socials">
+<div class="contact-socials-head">
+<small>Social media</small>
+<h2>Connect with Susan Mute.</h2>
+<p>Follow Susan Mute across her professional and social platforms.</p>
+</div>
+
+<div class="contact-social-grid">
+
+<a class="contact-social linkedin" href="{LINKEDIN}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on LinkedIn">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.34 3.31a2.06 2.06 0 1 0 0 4.12 2.06 2.06 0 0 0 0-4.12ZM3.56 9h3.56v11.45H3.56V9Zm5.79 0h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9Z"/></svg>
+<span><b>LinkedIn</b><small>Professional profile</small></span>
+</a>
+
+<a class="contact-social instagram" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on Instagram">
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.7" r=".9"/></svg>
+<span><b>Instagram</b><small>@sus_anmute</small></span>
+</a>
+
+<a class="contact-social facebook" href="{FACEBOOK}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on Facebook">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.65 21v-8.2h2.75l.41-3.2h-3.16V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.29-.04-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.6H7.6v3.2h2.75V21h3.3Z"/></svg>
+<span><b>Facebook</b><small>njeri.mute</small></span>
+</a>
+
+<a class="contact-social tiktok" href="{TIKTOK}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on TikTok">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.1 3c.3 2.1 1.5 3.4 3.9 3.8v3.1a8.4 8.4 0 0 1-3.9-1.3v6.2a5.8 5.8 0 1 1-5-5.75v3.2a2.7 2.7 0 1 0 1.9 2.58V3h3.1Z"/></svg>
+<span><b>TikTok</b><small>@wakilisusan</small></span>
+</a>
+
+<a class="contact-social x-social" href="{X_PROFILE}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on X">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+<span><b>X</b><small>@susan_mute</small></span>
+</a>
+
+</div>
+</div>
+
+</div><div><form class="contact-form" data-contact-form aria-describedby="contact-privacy-note"><label class="field"><span>Your name</span><input name="name" autocomplete="name" maxlength="120" required></label><label class="field"><span>Phone number</span><input name="phone" autocomplete="tel" inputmode="tel" maxlength="30"></label><label class="field full"><span>Email address</span><input type="email" name="email" autocomplete="email" maxlength="180"></label><label class="field full"><span>Matter type</span><select name="matter"><option value="General legal enquiry">General legal enquiry</option><option>Commercial Law</option><option>Family Law</option><option>Property Law</option><option>Data Privacy & Protection</option><option>Artificial Intelligence</option><option>Civil Law</option></select></label><label class="field full"><span>Briefly describe the matter</span><textarea name="message" maxlength="1800"></textarea></label><button class="btn btn-navy full" type="submit">Prepare email enquiry</button></form><p class="small-note" id="contact-privacy-note">Submitting this form opens your device’s email application. The website does not store the information you enter, and contacting the firm does not by itself create an advocate-client relationship.</p></div></div></section><section class="map-wrap"><div class="container map-head"><div class="eyebrow">Find the office</div><h2 class="section-title">Kikinga House, Biashara Street.</h2></div><div class="map-shell"><iframe title="Map to Susan Mute & Company Advocates" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Kikinga%20House%20Biashara%20Street%20Kiambu%20Town%20KCB%20Bank%20Kenya&output=embed"></iframe><div class="map-footer"><div><strong>Kikinga House, 6th Floor, Suite 600B</strong><span>Biashara Street, next to KCB Bank, Kiambu Town, Kenya</span></div><a class="btn btn-navy" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Kikinga+House+Biashara+Street+Kiambu+Town+KCB+Bank+Kenya">Open in Google Maps →</a></div></div></section>'''
 contact_schema=internal_schema('Contact Susan Mute & Company Advocates','/contact','ContactPage')
 contact_schema['@graph'].append({'@type':'LegalService','@id':SITE+'/#lawfirm','name':'Susan Mute & Company Advocates','telephone':PHONE_LINK,'email':EMAIL,'url':SITE+'/', 'address':{'@type':'PostalAddress','streetAddress':ADDRESS_LINE,'addressLocality':CITY,'addressRegion':REGION,'addressCountry':'KE'}})
 (ROOT/'contact.html').write_text(wrap(contact,'Contact Susan Mute & Company Advocates | Kiambu Town','Contact Susan Mute & Company Advocates by phone, WhatsApp or email. Current office: Kikinga House, 6th Floor, Suite 600B, Biashara Street, Kiambu Town.','/contact','contact',contact_schema),encoding='utf-8')

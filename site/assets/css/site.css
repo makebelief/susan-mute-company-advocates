@@ -311,3 +311,130 @@ img{height:auto}
   }
 }
 /* END FULL SOCIAL CONTACT RAIL V6 */
+
+/* CONTACT PAGE SOCIALS V7 */
+
+.contact-socials{
+  margin-top:28px;
+  padding:26px;
+  background:#f4f8fb;
+  border:1px solid var(--line);
+}
+
+.contact-socials-head small{
+  display:block;
+  color:#008fc9;
+  font-size:.72rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.11em;
+}
+
+.contact-socials-head h2{
+  margin:8px 0 6px;
+  font-family:Georgia,serif;
+  color:var(--navy);
+  font-size:1.7rem;
+  font-weight:500;
+}
+
+.contact-socials-head p{
+  margin:0 0 20px;
+  color:var(--muted);
+  font-size:.86rem;
+  line-height:1.6;
+}
+
+.contact-social-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.contact-social{
+  min-height:64px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--navy);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+
+.contact-social:hover{
+  transform:translateY(-2px);
+  border-color:#b7cad8;
+  box-shadow:0 8px 22px rgba(6,21,45,.08);
+}
+
+.contact-social svg{
+  width:25px;
+  height:25px;
+  flex:0 0 25px;
+}
+
+.contact-social span{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+
+.contact-social b{
+  font-size:.86rem;
+}
+
+.contact-social small{
+  margin-top:2px;
+  color:var(--muted);
+  font-size:.7rem;
+}
+
+.contact-social.linkedin svg,
+.contact-social.facebook svg,
+.contact-social.tiktok svg,
+.contact-social.x-social svg{
+  fill:currentColor;
+}
+
+.contact-social.instagram svg{
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+}
+
+.contact-social.linkedin{color:#0A66C2}
+.contact-social.facebook{color:#1877F2}
+.contact-social.instagram{color:#C13584}
+.contact-social.tiktok{color:#111}
+.contact-social.x-social{color:#111}
+
+/* Keep the floating rail strictly for immediate contact. */
+.rail-actions{
+  max-height:140px;
+}
+
+.contact-rail.collapsed .rail-actions{
+  max-height:0;
+}
+
+@media(max-width:720px){
+  .contact-socials{
+    padding:20px;
+  }
+
+  .contact-social-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact-social{
+    min-height:58px;
+  }
+
+  .rail-actions{
+    max-height:110px;
+  }
+}
+
+/* END CONTACT PAGE SOCIALS V7 */
