@@ -14,6 +14,11 @@ CITY = 'Kiambu Town'
 REGION = 'Kiambu County'
 COUNTRY = 'Kenya'
 LINKEDIN = 'https://ke.linkedin.com/in/susan-mute-70681516a'
+INSTAGRAM = 'https://www.instagram.com/sus_anmute/'
+X_PROFILE = 'https://x.com/susan_mute'
+FACEBOOK = 'https://www.facebook.com/njeri.mute'
+TIKTOK = 'https://www.tiktok.com/@wakilisusan'
+SOCIALS = [LINKEDIN, INSTAGRAM, X_PROFILE, FACEBOOK, TIKTOK]
 BUSINESS_DAILY = 'https://www.businessdailyafrica.com/bd/opinion-analysis/columnists/cyber-phishing-threatens-privacy-5094858'
 BUSINESS_DAILY_AUTHOR = 'https://www.businessdailyafrica.com/bd/authors/susan-mute-5094860'
 MCK_TWG = 'https://mediacouncil.or.ke/media-center/mck-newsroom/news/mck-ai-technical-working-group-begins-work'
@@ -122,7 +127,7 @@ def home_schema():
                 '@type':'Person','@id':SITE+'/#susan-mute','name':'Susan Mute',
                 'jobTitle':'Founding & Managing Partner','worksFor':{'@id':SITE+'/#lawfirm'},
                 'url':SITE+'/managing-partner','image':SITE+'/assets/media/susan-mute.webp',
-                'sameAs':[LINKEDIN],
+                'sameAs':SOCIALS,
                 'knowsAbout':['Commercial Law','Family Law','Property Law','Data Protection','Artificial Intelligence Law','Civil Litigation','Regulatory Compliance'],
                 'subjectOf':[{'@type':'Article','url':CITIZEN_AI},{'@type':'Article','url':CITIZEN_DATA},{'@type':'Article','url':BUSINESS_DAILY}]
             }
@@ -148,7 +153,7 @@ def person_schema():
     data['@graph'].append({
         '@type':'Person','@id':SITE+'/#susan-mute','name':'Susan Mute','jobTitle':'Founding & Managing Partner',
         'worksFor':{'@type':'LegalService','@id':SITE+'/#lawfirm','name':'Susan Mute & Company Advocates','url':SITE+'/'},
-        'image':SITE+'/assets/media/susan-mute.webp','sameAs':[LINKEDIN,BUSINESS_DAILY_AUTHOR],
+        'image':SITE+'/assets/media/susan-mute.webp','sameAs':SOCIALS+[BUSINESS_DAILY_AUTHOR],
         'knowsAbout':['Commercial Law','Family Law','Property Law','Data Protection','Artificial Intelligence Law','Civil Litigation','Regulatory Compliance'],
         'subjectOf':[{'@type':'Article','url':CITIZEN_AI,'headline':'Kenya’s AI regulation must catch up with innovation'},
                      {'@type':'Article','url':CITIZEN_DATA,'headline':'Data Compliance for Kenyan Businesses in the Digital Age'},
@@ -177,7 +182,7 @@ def jsonld(data):
 def head(title, desc, path='/', schema=None, robots='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'):
     url=url_for(path)
     schema_markup=jsonld(schema) if schema else ''
-    return f'''<!doctype html><html lang="en-KE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>{escape(title)}</title><meta name="description" content="{escape(desc)}"><meta name="robots" content="{robots}"><meta name="author" content="Susan Mute &amp; Company Advocates"><link rel="canonical" href="{url}"><link rel="alternate" hreflang="en-KE" href="{url}"><link rel="alternate" hreflang="x-default" href="{url}"><meta name="theme-color" content="#081b39"><meta name="color-scheme" content="light"><meta property="og:type" content="website"><meta property="og:locale" content="en_KE"><meta property="og:site_name" content="Susan Mute &amp; Company Advocates"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Susan Mute &amp; Company Advocates"><meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(desc)}"><meta name="twitter:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta name="twitter:image:alt" content="Susan Mute &amp; Company Advocates"><link rel="manifest" href="/site.webmanifest"><link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png"><link rel="apple-touch-icon" href="/images/icon-192.png"><link rel="stylesheet" href="/assets/css/site.css?v=5">{schema_markup}</head><body><a class="skip-link" href="#main">Skip to content</a><div class="topline"></div>'''
+    return f'''<!doctype html><html lang="en-KE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>{escape(title)}</title><meta name="description" content="{escape(desc)}"><meta name="robots" content="{robots}"><meta name="author" content="Susan Mute &amp; Company Advocates"><link rel="canonical" href="{url}"><link rel="alternate" hreflang="en-KE" href="{url}"><link rel="alternate" hreflang="x-default" href="{url}"><meta name="theme-color" content="#081b39"><meta name="color-scheme" content="light"><meta property="og:type" content="website"><meta property="og:locale" content="en_KE"><meta property="og:site_name" content="Susan Mute &amp; Company Advocates"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Susan Mute &amp; Company Advocates"><meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(desc)}"><meta name="twitter:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta name="twitter:image:alt" content="Susan Mute &amp; Company Advocates"><link rel="manifest" href="/site.webmanifest"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/site.css?v=5">{schema_markup}</head><body><a class="skip-link" href="#main">Skip to content</a><div class="topline"></div>'''
 
 
 def header(active=''):
@@ -196,7 +201,7 @@ def cta():
 
 
 def footer():
-    return f'''<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand"><img src="/images/logo-white.png" width="1236" height="1095" loading="lazy" decoding="async" alt="Susan Mute & Company Advocates"></div><p>{PRACTICES}</p></div><div><h4>Contact</h4><p><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a><br>Kikinga House, 6th Floor, Suite 600B<br>Biashara Street, Kiambu Town</p></div><div><h4>Quick links</h4><p><a href="/practice-areas">Practice Areas</a><br><a href="/managing-partner">Susan Mute</a><br><a href="{WA}" target="_blank" rel="noopener noreferrer">Start a consultation</a></p></div></div><div class="footer-bottom"><span>© 2026 Susan Mute & Company Advocates.</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/legal-notice">Legal Notice</a></span></div></div></footer><script src="/assets/js/site.js?v=5" defer></script></body></html>'''
+    return f'''<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-brand"><img src="/images/logo-white.png" width="1236" height="1095" loading="lazy" decoding="async" alt="Susan Mute & Company Advocates"></div><p>{PRACTICES}</p></div><div><h4>Contact</h4><p><a href="tel:{PHONE_LINK}">{PHONE_DISPLAY}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a><br>Kikinga House, 6th Floor, Suite 600B<br>Biashara Street, Kiambu Town</p></div><div><h4>Quick links</h4><p><a href="/practice-areas">Practice Areas</a><br><a href="/managing-partner">Susan Mute</a><br><a href="{WA}" target="_blank" rel="noopener noreferrer">Start a consultation</a></p><h4>Social</h4><p><a href="{LINKEDIN}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on LinkedIn">LinkedIn</a> · <a href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on Instagram">Instagram</a><br><a href="{X_PROFILE}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on X">X</a> · <a href="{FACEBOOK}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on Facebook">Facebook</a> · <a href="{TIKTOK}" target="_blank" rel="noopener noreferrer" aria-label="Susan Mute on TikTok">TikTok</a></p></div></div><div class="footer-bottom"><span>© 2026 Susan Mute & Company Advocates.</span><span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/legal-notice">Legal Notice</a></span></div></div></footer><script src="/assets/js/site.js?v=5" defer></script></body></html>'''
 
 
 def wrap(body,title,desc,path='/',active='',schema=None,robots='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'):
@@ -253,7 +258,7 @@ for p in PRACTICE_DATA:
 
 # Managing partner
 publications=f'''<section class="section publication-section"><div class="container"><div class="eyebrow">Selected work & commentary</div><h2 class="section-title">Contributions beyond the firm.</h2><div class="publication-grid"><article class="insight-card"><span class="tag">Media Council of Kenya</span><h3>Media, AI, data and social-media guidelines</h3><p>Susan participated in the Media Council of Kenya technical working group, including the Social Media and Internet subgroup.</p><a href="{MCK_TWG}" target="_blank" rel="noopener noreferrer">View MCK record →</a></article><article class="insight-card"><span class="tag">Citizen Digital · 2026</span><h3>Kenya’s AI regulation must catch up with innovation</h3><p>Commentary on AI adoption, governance and the need for responsive legal frameworks.</p><a href="{CITIZEN_AI}" target="_blank" rel="noopener noreferrer">Read article →</a></article><article class="insight-card"><span class="tag">Citizen Digital · 2025</span><h3>Data compliance for Kenyan businesses in the digital age</h3><p>Commentary on data protection, institutional accountability and compliance.</p><a href="{CITIZEN_DATA}" target="_blank" rel="noopener noreferrer">Read article →</a></article><article class="insight-card"><span class="tag">Business Daily · 2025</span><h3>Cyber phishing threatens privacy</h3><p>Commentary on privacy, cyber risk and safeguards for personal information.</p><a href="{BUSINESS_DAILY}" target="_blank" rel="noopener noreferrer">Read article →</a></article></div></div></section>'''
-partner=f'''<section class="page-hero"><div class="container"><div class="eyebrow">Founding & Managing Partner</div><h1 class="page-title">Susan Mute.</h1><p>Advocate of the High Court of Kenya and Founding & Managing Partner of Susan Mute & Company Advocates.</p></div></section><section class="page-main">{breadcrumbs([('Home','/'),('Susan Mute','/managing-partner')])}<div class="container partner-grid"><div class="partner-visual" role="img" aria-label="Portrait of Susan Mute"><div class="partner-badge"><strong>Susan Mute</strong><span>Advocate · Founding & Managing Partner</span></div></div><div><div class="eyebrow">Profile</div><h2 class="section-title">Legal experience across business, regulation and technology.</h2><p class="section-copy">Susan Mute is an Advocate of the High Court of Kenya, a member of the Law Society of Kenya, and the Founding & Managing Partner of Susan Mute & Company Advocates.</p><p class="section-copy">Her experience spans corporate and commercial law, employment, data protection, property, regulatory compliance and technology-related legal matters, including work with businesses, governments and NGOs.</p><p class="section-copy">She has contributed to Media Council of Kenya work on media, AI, data and social-media guidelines, and regularly writes on privacy, data compliance and artificial intelligence regulation.</p><div class="profile-links"><a class="text-link" href="{LINKEDIN}" target="_blank" rel="noopener noreferrer">LinkedIn →</a><a class="text-link" href="{BUSINESS_DAILY_AUTHOR}" target="_blank" rel="noopener noreferrer">Business Daily author page →</a></div><a class="btn btn-cyan" href="{WA}" target="_blank" rel="noopener noreferrer">Start a consultation</a></div></div></section>{publications}'''
+partner=f'''<section class="page-hero"><div class="container"><div class="eyebrow">Founding & Managing Partner</div><h1 class="page-title">Susan Mute.</h1><p>Advocate of the High Court of Kenya and Founding & Managing Partner of Susan Mute & Company Advocates.</p></div></section><section class="page-main">{breadcrumbs([('Home','/'),('Susan Mute','/managing-partner')])}<div class="container partner-grid"><div class="partner-visual" role="img" aria-label="Portrait of Susan Mute"><div class="partner-badge"><strong>Susan Mute</strong><span>Advocate · Founding & Managing Partner</span></div></div><div><div class="eyebrow">Profile</div><h2 class="section-title">Legal experience across business, regulation and technology.</h2><p class="section-copy">Susan Mute is an Advocate of the High Court of Kenya, a member of the Law Society of Kenya, and the Founding & Managing Partner of Susan Mute & Company Advocates.</p><p class="section-copy">Her experience spans corporate and commercial law, employment, data protection, property, regulatory compliance and technology-related legal matters, including work with businesses, governments and NGOs.</p><p class="section-copy">She has contributed to Media Council of Kenya work on media, AI, data and social-media guidelines, and regularly writes on privacy, data compliance and artificial intelligence regulation.</p><div class="profile-links"><a class="text-link" href="{LINKEDIN}" target="_blank" rel="noopener noreferrer">LinkedIn →</a><a class="text-link" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">Instagram →</a><a class="text-link" href="{X_PROFILE}" target="_blank" rel="noopener noreferrer">X →</a><a class="text-link" href="{FACEBOOK}" target="_blank" rel="noopener noreferrer">Facebook →</a><a class="text-link" href="{TIKTOK}" target="_blank" rel="noopener noreferrer">TikTok →</a><a class="text-link" href="{BUSINESS_DAILY_AUTHOR}" target="_blank" rel="noopener noreferrer">Business Daily author page →</a></div><a class="btn btn-cyan" href="{WA}" target="_blank" rel="noopener noreferrer">Start a consultation</a></div></div></section>{publications}'''
 (ROOT/'managing-partner.html').write_text(wrap(partner,'Susan Mute | Advocate of the High Court of Kenya','Meet Susan Mute, Advocate of the High Court of Kenya and Founding & Managing Partner of Susan Mute & Company Advocates, with experience in commercial, regulatory, data protection and technology law.','/managing-partner','partner',person_schema()),encoding='utf-8')
 
 # Insights
@@ -302,3 +307,29 @@ Canonical: {SITE}/.well-known/security.txt
 )
 
 print(f'Generated SEO-enhanced site with {len(paths)} indexable URLs.')
+
+
+# ROOT_FAVICON_FALLBACKS_V1
+# Conventional root favicon files for browsers and search crawlers.
+from pathlib import Path as _FaviconPath
+import struct as _favicon_struct
+
+_favicon_source = _FaviconPath("site/images/icon-192.png")
+if _favicon_source.exists():
+    _favicon_png = _favicon_source.read_bytes()
+
+    _FaviconPath("site/favicon.png").write_bytes(_favicon_png)
+    _FaviconPath("site/apple-touch-icon.png").write_bytes(_favicon_png)
+
+    # ICO container with embedded PNG image.
+    _favicon_header = _favicon_struct.pack("<HHH", 0, 1, 1)
+    _favicon_entry = _favicon_struct.pack(
+        "<BBBBHHII",
+        192, 192, 0, 0,
+        1, 32,
+        len(_favicon_png),
+        22
+    )
+    _FaviconPath("site/favicon.ico").write_bytes(
+        _favicon_header + _favicon_entry + _favicon_png
+    )
