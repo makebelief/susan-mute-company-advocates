@@ -182,7 +182,7 @@ def jsonld(data):
 def head(title, desc, path='/', schema=None, robots='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1'):
     url=url_for(path)
     schema_markup=jsonld(schema) if schema else ''
-    return f'''<!doctype html><html lang="en-KE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>{escape(title)}</title><meta name="description" content="{escape(desc)}"><meta name="robots" content="{robots}"><meta name="author" content="Susan Mute &amp; Company Advocates"><link rel="canonical" href="{url}"><link rel="alternate" hreflang="en-KE" href="{url}"><link rel="alternate" hreflang="x-default" href="{url}"><meta name="theme-color" content="#081b39"><meta name="color-scheme" content="light"><meta property="og:type" content="website"><meta property="og:locale" content="en_KE"><meta property="og:site_name" content="Susan Mute &amp; Company Advocates"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Susan Mute &amp; Company Advocates"><meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(desc)}"><meta name="twitter:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta name="twitter:image:alt" content="Susan Mute &amp; Company Advocates"><link rel="manifest" href="/site.webmanifest"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/site.css?v=5">{schema_markup}</head><body><a class="skip-link" href="#main">Skip to content</a><div class="topline"></div>'''
+    return f'''<!doctype html><html lang="en-KE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>{escape(title)}</title><meta name="description" content="{escape(desc)}"><meta name="robots" content="{robots}"><meta name="author" content="Susan Mute &amp; Company Advocates"><link rel="canonical" href="{url}"><link rel="alternate" hreflang="en-KE" href="{url}"><link rel="alternate" hreflang="x-default" href="{url}"><meta name="theme-color" content="#081b39"><meta name="color-scheme" content="light"><meta property="og:type" content="website"><meta property="og:locale" content="en_KE"><meta property="og:site_name" content="Susan Mute &amp; Company Advocates"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(desc)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Susan Mute &amp; Company Advocates"><meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(desc)}"><meta name="twitter:image" content="{SITE}/images/susan-mute-social-card.jpg"><meta name="twitter:image:alt" content="Susan Mute &amp; Company Advocates"><link rel="manifest" href="/site.webmanifest"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="192x192" href="/images/icon-192.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="stylesheet" href="/assets/css/site.css?v=6">{schema_markup}</head><body><a class="skip-link" href="#main">Skip to content</a><div class="topline"></div>'''
 
 
 def header(active=''):
@@ -193,7 +193,102 @@ def header(active=''):
 
 
 def rail():
-    return f'''<aside class="contact-rail" aria-label="Quick contact"><button class="rail-toggle" aria-label="Expand or collapse quick contact" aria-expanded="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button><div class="rail-actions"><a href="{WA}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Susan Mute & Company Advocates"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.3-4.2a8.5 8.5 0 1 1 15.7-4.5Z"/><path d="M8.5 8.2c.4 2.4 2.2 4.5 4.8 5.6.9.4 1.7-.3 2.1-1.2"/></svg></a><a href="tel:{PHONE_LINK}" aria-label="Call Susan Mute & Company Advocates"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3l1.4 4-2 1.4a16 16 0 0 0 7.2 7.2l1.4-2L20 16v3c0 1.1-.9 2-2 2C9.7 21 3 14.3 3 6c0-1.1.9-2 2-2Z"/></svg></a></div></aside>'''
+    return f'''<aside class="contact-rail" aria-label="Quick contact and social media">
+<button class="rail-toggle" aria-label="Expand or collapse quick contact and social media" aria-expanded="true">
+<svg viewBox="0 0 24 24" class="rail-chevron" aria-hidden="true">
+<path d="M9 18l6-6-6-6"/>
+</svg>
+</button>
+
+<div class="rail-actions" role="group" aria-label="Contact and social media links">
+
+<a class="rail-link rail-whatsapp"
+   data-platform="whatsapp"
+   href="{WA}"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="WhatsApp Susan Mute & Company Advocates"
+   title="WhatsApp">
+<svg viewBox="0 0 24 24" class="brand-line" aria-hidden="true">
+<path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.3-4.2a8.5 8.5 0 1 1 15.7-4.5Z"/>
+<path d="M8.2 8.1c.5 2.6 2.5 4.9 5.1 5.9.9.4 1.8-.2 2.3-1.1"/>
+</svg>
+</a>
+
+<a class="rail-link rail-linkedin"
+   data-platform="linkedin"
+   href="{LINKEDIN}"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Susan Mute on LinkedIn"
+   title="LinkedIn">
+<svg viewBox="0 0 24 24" class="brand-fill" aria-hidden="true">
+<path d="M5.34 3.31a2.06 2.06 0 1 0 0 4.12 2.06 2.06 0 0 0 0-4.12ZM3.56 9h3.56v11.45H3.56V9Zm5.79 0h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9Z"/>
+</svg>
+</a>
+
+<a class="rail-link rail-instagram"
+   data-platform="instagram"
+   href="{INSTAGRAM}"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Susan Mute on Instagram"
+   title="Instagram">
+<svg viewBox="0 0 24 24" class="brand-line" aria-hidden="true">
+<rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/>
+<circle cx="12" cy="12" r="4.1"/>
+<circle cx="17.4" cy="6.7" r=".9" class="icon-dot"/>
+</svg>
+</a>
+
+<a class="rail-link rail-facebook"
+   data-platform="facebook"
+   href="{FACEBOOK}"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Susan Mute on Facebook"
+   title="Facebook">
+<svg viewBox="0 0 24 24" class="brand-fill" aria-hidden="true">
+<path d="M13.65 21v-8.2h2.75l.41-3.2h-3.16V7.56c0-.93.26-1.56 1.59-1.56h1.7V3.14c-.29-.04-1.3-.13-2.47-.13-2.44 0-4.11 1.49-4.11 4.23V9.6H7.6v3.2h2.75V21h3.3Z"/>
+</svg>
+</a>
+
+<a class="rail-link rail-tiktok"
+   data-platform="tiktok"
+   href="{TIKTOK}"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Susan Mute on TikTok"
+   title="TikTok">
+<svg viewBox="0 0 24 24" class="brand-fill" aria-hidden="true">
+<path d="M14.1 3c.3 2.1 1.5 3.4 3.9 3.8v3.1a8.4 8.4 0 0 1-3.9-1.3v6.2a5.8 5.8 0 1 1-5-5.75v3.2a2.7 2.7 0 1 0 1.9 2.58V3h3.1Z"/>
+</svg>
+</a>
+
+<a class="rail-link rail-x"
+   data-platform="x"
+   href="{X_PROFILE}"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Susan Mute on X"
+   title="X">
+<svg viewBox="0 0 24 24" class="brand-fill" aria-hidden="true">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/>
+</svg>
+</a>
+
+<a class="rail-link rail-call"
+   data-platform="phone"
+   href="tel:{PHONE_LINK}"
+   aria-label="Call Susan Mute & Company Advocates"
+   title="Call">
+<svg viewBox="0 0 24 24" class="brand-line" aria-hidden="true">
+<path d="M5 4h3l1.4 4-2 1.4a16 16 0 0 0 7.2 7.2l1.4-2L20 16v3c0 1.1-.9 2-2 2C9.7 21 3 14.3 3 6c0-1.1.9-2 2-2Z"/>
+</svg>
+</a>
+
+</div>
+</aside>'''
 
 
 def cta():

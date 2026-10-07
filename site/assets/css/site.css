@@ -84,3 +84,230 @@ img{height:auto}
   .mobile-nav.open{max-height:calc(100dvh - 80px)}
   .contact-rail{top:55%}
 }
+
+/* FULL SOCIAL CONTACT RAIL V6 */
+.contact-rail{
+  position:fixed;
+  right:0;
+  top:52%;
+  transform:translateY(-50%);
+  z-index:1000;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  filter:drop-shadow(0 14px 26px rgba(0,0,0,.22));
+}
+
+.contact-rail.collapsed{
+  transform:translateY(-50%);
+}
+
+.rail-toggle{
+  width:54px;
+  height:54px;
+  border:0;
+  border-radius:16px 0 0 0;
+  background:var(--navy2);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  position:relative;
+  z-index:2;
+}
+
+.rail-toggle:hover{
+  background:var(--blue);
+}
+
+.rail-chevron{
+  width:21px;
+  height:21px;
+  stroke:currentColor;
+  fill:none;
+  stroke-width:2.3;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  transition:transform .28s ease;
+}
+
+.contact-rail.collapsed .rail-chevron{
+  transform:rotate(180deg);
+}
+
+.rail-actions{
+  width:54px;
+  max-height:500px;
+  opacity:1;
+  overflow:hidden;
+  border-radius:0 0 0 16px;
+  background:linear-gradient(180deg,var(--cyan),#008fc9);
+  display:flex;
+  flex-direction:column;
+  transition:max-height .28s ease,opacity .2s ease;
+}
+
+.contact-rail.collapsed .rail-actions{
+  max-height:0;
+  opacity:0;
+  pointer-events:none;
+}
+
+.rail-actions .rail-link{
+  width:54px;
+  height:52px;
+  flex:0 0 52px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  border-top:1px solid rgba(255,255,255,.28);
+  transition:background .18s ease,transform .18s ease;
+}
+
+.rail-actions .rail-link:hover,
+.rail-actions .rail-link:focus-visible{
+  transform:translateX(-2px);
+}
+
+.rail-actions svg{
+  width:22px;
+  height:22px;
+}
+
+.rail-actions .brand-fill{
+  fill:currentColor;
+  stroke:none;
+}
+
+.rail-actions .brand-line{
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.9;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+.rail-actions .icon-dot{
+  fill:currentColor;
+  stroke:none;
+}
+
+/* Recognisable platform colours appear on hover while
+   Susan Mute branding remains the default presentation. */
+.rail-whatsapp:hover,
+.rail-whatsapp:focus-visible{
+  background:#25D366;
+}
+
+.rail-linkedin:hover,
+.rail-linkedin:focus-visible{
+  background:#0A66C2;
+}
+
+.rail-instagram:hover,
+.rail-instagram:focus-visible{
+  background:linear-gradient(135deg,#833AB4,#E1306C,#FCAF45);
+}
+
+.rail-facebook:hover,
+.rail-facebook:focus-visible{
+  background:#1877F2;
+}
+
+.rail-tiktok:hover,
+.rail-tiktok:focus-visible{
+  background:#111;
+}
+
+.rail-x:hover,
+.rail-x:focus-visible{
+  background:#000;
+}
+
+.rail-call:hover,
+.rail-call:focus-visible{
+  background:var(--navy);
+}
+
+@media(max-width:720px){
+  .contact-rail{
+    top:53%;
+    max-height:none;
+  }
+
+  .rail-toggle{
+    width:44px;
+    height:44px;
+    border-radius:14px 0 0 0;
+  }
+
+  .rail-actions{
+    width:44px;
+    max-height:420px;
+    border-radius:0 0 0 14px;
+  }
+
+  .contact-rail.collapsed .rail-actions{
+    max-height:0;
+  }
+
+  .rail-actions .rail-link{
+    width:44px;
+    height:44px;
+    flex-basis:44px;
+  }
+
+  .rail-actions svg{
+    width:19px;
+    height:19px;
+  }
+}
+
+@media(max-width:390px){
+  .rail-toggle{
+    width:41px;
+    height:41px;
+  }
+
+  .rail-actions{
+    width:41px;
+  }
+
+  .rail-actions .rail-link{
+    width:41px;
+    height:41px;
+    flex-basis:41px;
+  }
+
+  .rail-actions svg{
+    width:18px;
+    height:18px;
+  }
+}
+
+@media(orientation:landscape) and (max-height:520px){
+  .contact-rail{
+    top:50%;
+  }
+
+  .rail-toggle{
+    width:40px;
+    height:40px;
+  }
+
+  .rail-actions{
+    width:40px;
+  }
+
+  .rail-actions .rail-link{
+    width:40px;
+    height:38px;
+    flex-basis:38px;
+  }
+
+  .rail-actions svg{
+    width:17px;
+    height:17px;
+  }
+}
+/* END FULL SOCIAL CONTACT RAIL V6 */
