@@ -5,7 +5,7 @@ Production-ready static website preserving the Cecilia Mwaura & Co. Advocates UI
 ## Production characteristics
 - Mobile-first responsive layout and compact floating phone/WhatsApp rail
 - Static architecture: no public database, login surface, or server-side form handler
-- Strict Vercel security headers and CSP
+- Strict Cloudflare Pages security headers and CSP
 - Optimized 30fps web logo animation (~0.5 MB) derived from the supplied 4K60 master
 - Optimized founder portrait and local branding assets
 - SEO metadata, Open Graph card, LegalService structured data, sitemap, robots.txt, web manifest
@@ -33,4 +33,4 @@ Use these settings in Cloudflare Pages:
 
 The `site/_headers` file is copied into `dist/` during the build and applies the production security headers on Cloudflare Pages.
 
-The initial canonical hostname is `https://susan-mute-company-advocates.pages.dev`. When a custom domain is connected, update `SITE` in `generate.py`, regenerate the site, then commit and push.
+The production canonical hostname is `https://susanmute.co.ke`. Cloudflare Pages and Vercel deployment hostnames are deployment or preview surfaces and must not be treated as canonical production URLs.

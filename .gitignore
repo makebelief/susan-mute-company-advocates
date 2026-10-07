@@ -5,3 +5,5 @@ dist/
 
 # Cloudflare Wrangler local cache
 .wrangler/
+__pycache__/
+*.pyc

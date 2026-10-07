@@ -1,0 +1,4 @@
+Contact: mailto:susanmutelaw@gmail.com
+Expires: 2027-10-07T23:59:59Z
+Preferred-Languages: en
+Canonical: https://susanmute.co.ke/.well-known/security.txt
